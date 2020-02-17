@@ -1,7 +1,6 @@
 *.aux
 *.txt
 *.out
-*.pdf
 *.synctex
 *.synctex.gz
 *.log
