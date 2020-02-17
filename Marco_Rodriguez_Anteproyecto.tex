@@ -40,7 +40,7 @@
 
 %Paquetes para la bibliografia
 \usepackage{natbib} % Requerido para cambiar bibliografia a formato APA
-\usepackage{cite}	
+%\usepackage{cite}	
 \usepackage{listings}
 
 
@@ -108,10 +108,13 @@
 	\section*{ INTRODUCCIÓN}
 \end{center}
 
-Los primeros indicios del uso de la energía eléctrica sucedieron en el cuarto final del siglo XIX. La sustitución del gas y aceite por la electricidad además de ser un proceso técnico fue un verdadero cambio social que implicó modificaciones extraordinarias en la vida cotidiana de las personas, cambios que comenzaron por la sustitución del alumbrado público y posteriormente por varias clases de procesos industriales como motores, metalurgia, refrigeración y de último llegaron a las comunicaciones con la radio y la telefonía.
+Los primeros indicios del uso de la energía eléctrica sucedieron en el cuarto final del siglo XIX. La sustitución del gas y aceite por la electricidad además de ser un proceso técnico fue un verdadero cambio social que implicó modificaciones extraordinarias en la vida cotidiana de las personas, cambios que comenzaron por la sustitución del alumbrado público y posteriormente por varias clases de procesos industriales como motores, metalurgia, refrigeración y de último llegaron a las comunicaciones con la radio y la telefonía.\\
 
+El siguiente cambio de paradigma en el que se vio involucrado la electricidad tuvo lugar a lo largo del siglo XX y surge desde la necesidad de facilitar las tareas realizadas a diario en casa. En ello los investigadores de la época vieron una solución adaptando equipos con energía eléctrica para su uso en el hogar. Las industrias replicaron el crecimiento tecnológico que tuvieron en sus productos, lo que trajo como consecuencia el desarrollo los electrodomésticos. La primera producción de aparatos en masa como refrigeradores, lavadoras, televisores y radios sucedieron en esta época y tuvieron una alta receptividad por parte de los compradores. La invención del transistor solo aceleró el reemplazo de aparatos dada su capacidad de minimizar los equipos.\\
 
-El siguiente cambio de paradigma en el que se vio involucrado la electricidad tuvo lugar a lo largo del siglo XX y se produjo desde la necesidad de facilitar las tareas realizadas a diario en casa. En ello los investigadores de la época vieron una solución adaptando equipos con energía eléctrica para su uso en el hogar. Las industrias replicaron el crecimiento tecnológico que tuvieron en sus productos, lo que trajo como consecuencia el desarrollo los electrodomésticos. La primera producción de aparatos en masa como refrigeradores, lavadoras, televisores y radios sucedieron en esta época y tuvieron una alta receptividad por parte de los compradores. La invención del transistor solo aceleró el reemplazo de aparatos dada su capacidad de minimizar los equipos.
+La integración de la electrónica a la industria fomentó la creación de sistemas automatizados de adquisición de datos, supervisión y control también llamados sistemas \textit{SCADA} por sus siglas en inglés. Estos sistemas manejan áreas críticas de las industrias y son parte de los procesos fundamentales de muchas de ellas por lo que necesitan ser diseñados con robustez, fiabilidad y seguridad. La aparición del Internet y las comunicaciones modernas en estos sistemas permite a los usuarios, de manera inálambrica incluso, monitorear y actuar sobre el sistema a distancia, sin presencia física en la planta.\\
+
+Además de poder monitorear y realizar acciones sobre los sistemas, los instrumentos de medida de última tecnología se fabrican de modo que puedan ser compatibles con medios de comunicación inalámbricas lo que posibilita la transmisión de datos adquiridos sin necesidad de cable a la central del sistema \textit{SCADA}. El presente trabajo de grado pretende realizar el diseño de un sistema de adquisición y transmisión de datos integrando microcontroladores ESP a medidores de energía eléctrica para formar una red mallada inalámbrica capaz de transmitir los datos recolectados a un punto central.
 
 \newpage
 
@@ -124,12 +127,14 @@ El siguiente cambio de paradigma en el que se vio involucrado la electricidad tu
 
 \vspace{0.3cm}
 
-La energía eléctrica es diferente de otras manifestaciones de la energía, debido a que no se puede almacenar por si sola como electricidad. Esto obliga a que la energía eléctrica consumida por un equipo u aparato tenga que generarse al momento en el cual se vaya a consumir. Los procesos para la generación de energía tienen costos altos de desarrollo e implementación a gran escala (países o estados), entonces con la electrificación de las industrias y la producción en masa de los electrodomésticos se volvió necesario para el ente que genera la energía medir el consumo de cada uno de sus usuarios por razones enteramente económicas.
-
-En Venezuela se utiliza el mismo método de adquisición de datos desde que se instaló el sistema eléctrico. Este consiste en un operador que se acerca hasta el lugar donde se encuentra un medidor de energía y registra la lectura que marca el medidor, esto se hace de manera repetitiva para todos los sitios donde se quiera registrar el consumo. En ocasiones los medidores tienen una salida codificada donde comunica el valor del consumo por infrarrojo lo que permite al operador registrar el valor de ese consumo mediante un aparato compatible con este protocolo. Debido a esta problemática surge la necesidad de sustituir este sistema de adquisición de datos manual por uno que no requiera el traslado del operador hasta el sitio, que sea económico, confiable y eficiente.
+La energía eléctrica es diferente de otras manifestaciones de la energía, debido a que no se puede almacenar por si sola como electricidad. Esto obliga a que la energía eléctrica consumida por un equipo u aparato tenga que generarse al momento en el cual se vaya a consumir. Los procesos para la generación de energía tienen costos altos de desarrollo e implementación a gran escala (países o estados) por lo que surtir de energía a las industrias y electrodomésticos tiene un costo que la empresa que genera la energía necesita recuperar. Como consecuencia se suele medir el consumo de cada uno de los usuarios por razones enteramente económicas.\\
 
 
-Los principales equipos de medición de energía poseen en su diseño una salida por pulsos y soportan distintos protocolos de comunicación, lo que representa una ventaja al trabajar con microcontroladores ESP32 en este sistema pues facilita la adquisición de los datos a partir del medidor y su salida mediante comunicaciones inalámbricas. Adicional a esta ventaja, utilizando una red mallada WiFi se pueden lograr comunicaciones entre dispositivos lo que permitiría la transmisión de los datos captados y su salida hacia alguna red externa deseada sin utilizar cables entre los medidores y la central de adquisición de datos ni intervención presencial del operador. Debido a las debilidades expuestas anteriormente y las ventajas que representaría un sistema de este tipo se evidencia la necesidad de realizar el diseño.
+En Venezuela se utiliza el mismo método de adquisición de datos desde que se instaló el sistema eléctrico. Este consiste en un operador que se acerca hasta el lugar donde se encuentra un medidor de energía y registra la lectura que marca el medidor, esto se hace de manera repetitiva para todos los sitios donde se quiera registrar el consumo. En ocasiones los medidores tienen una salida codificada donde comunica el valor del consumo por infrarrojo lo que permite al operador registrar el valor de ese consumo mediante un aparato compatible con este protocolo. Debido a esta problemática surge la necesidad de sustituir este sistema de adquisición de datos manual por uno que no requiera el traslado del operador hasta el sitio, que sea económico, confiable y eficiente.\\
+
+
+Los principales equipos de medición de energía poseen en su diseño una salida por pulsos y soportan distintos protocolos de comunicación, lo que representa una ventaja al trabajar con microcontroladores ESP32 en este sistema pues facilita la adquisición de los datos a partir del medidor y su salida mediante comunicaciones inalámbricas. Adicional a esta ventaja, utilizando una red mallada WiFi se pueden lograr comunicaciones entre dispositivos lo que permitiría la transmisión de los datos captados y su salida hacia alguna red externa deseada sin utilizar cables entre los medidores y la central de adquisición de datos ni intervención presencial del operador. Debido a las debilidades expuestas anteriormente y las ventajas que representaría un sistema de este tipo se evidencia la necesidad de realizar el diseño.\\
+
 
 
  \newpage
@@ -154,14 +159,18 @@ Establecer la red mallada se requiere de nodos que posean la capacidad de enlaza
 
 \vspace{1cm}
 
-El concepto de una red mallada no es algo nuevo, consiste en una serie de dispositivos conectados todos entre sí con la capacidad de comunicarse y enviar datos a un lugar de destino. Las soluciones ya existentes que se tomarán como referencia han logrado: utilizar redes malladas de sensores que permiten una recolección y trasmisión de datos fuera de la red. Ademas se ha logrado comunicar de manera inalámbrica a dispositivos que originalmente no poseen esa facultad, equipando estos aparatos con módulos WiFi y un microcontrolador para el manejo del envío y recepción. Los trabajos mencionados se presentan a continuación:
-
-El trabajo de los ingenieros Ruiz-Ayala et al. (2018) en el artículo ”Monitoreo de variables meteorológicas a través de un sistema inalámbrico de adquisición de datos” publicado en la Revista de investigación, desarrollo e innovación de Colombia. En este artículo se presenta el desarrollo de un sistema de monitoreo inalámbrico de variables climáticas. El diseño se realizó a partir de microcontroladores de Microchip, los cuales realizan la adquisición, almacenamiento y transmisión de las señales digitales. Se utilizó cinco canales para conexión con sensores, una memoria micro SD para el almacenamiento y un módulo WiFi para la supervisión inalámbrica de las variables. La información fue almacenada en una página web donde es posible consultar los datos, además se diseñó una aplicación de Android para visualización desde dispositivos móviles. El rendimiento en comparación con una estación meteorológica comercial fue satisfactorio. Se concluye que los microcontroladores son dispositivos adecuados para implementar sistemas de adquisición de datos que al ser combinados con aplicativos desarrollados, brindan soluciones competitivas a un costo razonable.
-
-En cuanto al desarrollo realizado por los ingenieros Frías y Vicente (2006) ”Diseño y construcción de un prototipo para medición y transmisión inalámbrica del consumo de energía eléctrica de un sistema monofásico bifilar” se abordó el diseño y la construcción de un dispositivo medidor (esclavo) y un dispositivo maestro. El dispositivo esclavo almacena distintas variables además de pares de energía-tiempo ordenados para generar información sobre la demanda. El esclavo es capaz de establecer comunicación bidireccional y responder a comandos para extracción de datos o configuración de parte del maestro. En caso de falla del suministro, el valor contador de energía se guarda en una memoria no volátil para su posterior recuperación. El hardware de medición de energía utiliza un chip ADE7753 de Analog Devices, en la comunicación inalámbrica se utiliza una radio de 433 MHz ATR-XTR-903 de ABACOM. El procesamiento queda a cargo de un PIC16F877A. El dispositivo maestro conectado al puerto serial del PC permite configurar al esclavo, visualizar y almacenar los datos de manera remota mediante una aplicación en el computador. La circuitería es idéntica a la del esclavo. Las pruebas de comunicación fueron satisfactorias permitiendo confirmar el funcionamiento de todas las características, con la limitación de 1 a 65535 esclavos, además se reservaron espacios de la trama para futuras ampliaciones.
+El concepto de una red mallada no es algo nuevo, consiste en una serie de dispositivos conectados todos entre sí con la capacidad de comunicarse y enviar datos a un lugar de destino. Las soluciones ya existentes que se tomarán como referencia han logrado: utilizar redes malladas de sensores que permiten una recolección y trasmisión de datos fuera de la red. Ademas se ha logrado comunicar de manera inalámbrica a dispositivos que originalmente no poseen esa facultad, equipando estos aparatos con módulos WiFi y un microcontrolador para el manejo del envío y recepción. Los trabajos mencionados se presentan a continuación:\\
 
 
-Quiñones Cuenca et al. (2017) en su trabajo ”Sistema De Monitoreo de Variables Medioambientales Usando Una Red de Sensores Inalámbricos y Plataformas De Internet De Las Cosas” se pensó en un sistema para la recolección de datos meteorológicos usando una red de sensores inalámbricos (RSI), capaz de transmitir datos en tiempo real. El sistema logró automatizar procesos de obtención de datos de manera continua y a largo plazo, por medio de un módulo de abastecimiento de energía solar que permite autonomía para su funcionamiento. Se propuso la utilización de dos sistemas: DigiMesh y WiFi. El procesamiento se realizó en un Arduino Uno, para la comunicación se utilizó un XBee PRO 900HP (DigiMesh) y un moduló Electric Imp.01 (WiFi). Adicionalmente se evaluó la transmisión de los datos hacia plataformas de Internet de las cosas (IoT), en donde se gestionará y visualizará los datos obtenidos por los nodos. Este sistema fue pensado como alternativa de bajo costo para sistemas meteorológicos y está basado en componentes de hardware y software libre. Al realizarse la validación de los datos obtenidos mediante un análisis estadístico con los datos registrados por una estación meteorológica se obtuvo un error relativo promedio máximo de 4,93 %.
+El trabajo de los ingenieros \cite{RUIZ-AYALA2018} en el artículo ”Monitoreo de variables meteorológicas a través de un sistema inalámbrico de adquisición de datos” publicado en la Revista de investigación, desarrollo e innovación de Colombia. En este artículo se presenta el desarrollo de un sistema de monitoreo inalámbrico de variables climáticas. El diseño se realizó a partir de microcontroladores de Microchip, los cuales realizan la adquisición, almacenamiento y transmisión de las señales digitales. Se utilizó cinco canales para conexión con sensores, una memoria micro SD para el almacenamiento y un módulo WiFi para la supervisión inalámbrica de las variables. La información fue almacenada en una página web donde es posible consultar los datos, además se diseñó una aplicación de Android para visualización desde dispositivos móviles. El rendimiento en comparación con una estación meteorológica comercial fue satisfactorio. Se concluye que los microcontroladores son dispositivos adecuados para implementar sistemas de adquisición de datos que al ser combinados con aplicativos desarrollados, brindan soluciones competitivas a un costo razonable.\\
+
+
+En cuanto al desarrollo realizado por el ingeniero \cite{DA2006} ”Diseño y construcción de un prototipo para medición y transmisión inalámbrica del consumo de energía eléctrica de un sistema monofásico bifilar” se abordó el diseño y la construcción de un dispositivo medidor (esclavo) y un dispositivo maestro. El dispositivo esclavo almacena distintas variables además de pares de energía-tiempo ordenados para generar información sobre la demanda. El esclavo es capaz de establecer comunicación bidireccional y responder a comandos para extracción de datos o configuración de parte del maestro. En caso de falla del suministro, el valor contador de energía se guarda en una memoria no volátil para su posterior recuperación. El hardware de medición de energía utiliza un chip ADE7753 de Analog Devices, en la comunicación inalámbrica se utiliza una radio de 433 MHz ATR-XTR-903 de ABACOM. El procesamiento queda a cargo de un PIC16F877A. El dispositivo maestro conectado al puerto serial del PC permite configurar al esclavo, visualizar y almacenar los datos de manera remota mediante una aplicación en el computador. La circuitería es idéntica a la del esclavo. Las pruebas de comunicación fueron satisfactorias permitiendo confirmar el funcionamiento de todas las características, con la limitación de 1 a 65535 esclavos, además se reservaron espacios de la trama para futuras ampliaciones.\\
+
+
+
+\cite{QCGJ2018} en su trabajo ”Sistema De Monitoreo de Variables Medioambientales Usando Una Red de Sensores Inalámbricos y Plataformas De Internet De Las Cosas” se pensó en un sistema para la recolección de datos meteorológicos usando una red de sensores inalámbricos (RSI), capaz de transmitir datos en tiempo real. El sistema logró automatizar procesos de obtención de datos de manera continua y a largo plazo, por medio de un módulo de abastecimiento de energía solar que permite autonomía para su funcionamiento. Se propuso la utilización de dos sistemas: DigiMesh y WiFi. El procesamiento se realizó en un Arduino Uno, para la comunicación se utilizó un XBee PRO 900HP (DigiMesh) y un moduló Electric Imp.01 (WiFi). Adicionalmente se evaluó la transmisión de los datos hacia plataformas de Internet de las cosas (IoT), en donde se gestionará y visualizará los datos obtenidos por los nodos. Este sistema fue pensado como alternativa de bajo costo para sistemas meteorológicos y está basado en componentes de hardware y software libre. Al realizarse la validación de los datos obtenidos mediante un análisis estadístico con los datos registrados por una estación meteorológica se obtuvo un error relativo promedio máximo de 4,93 \%.\\
+
 
 
 
@@ -323,7 +332,16 @@ Con la finalidad de realizar efectivamente cada objetivo del proyecto, se llevar
 	
 		
 	\end{itemize}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{EsquemaTEG}
+		\caption{Representación gráfica de la red descrita en el alcance.}
+		\label{fig:esquemateg}
+	\end{figure}
 	
+	
+	\newpage
 	
 	\begin{center}		
 		\section*{ RECURSOS Y FACTIBILIDAD}	
@@ -405,8 +423,8 @@ Con la finalidad de realizar efectivamente cada objetivo del proyecto, se llevar
 
 \newpage
 
-%\bibliographystyle{apalike}
-%\bibliography{Molina_Natalia_Anteproyecto}
+\bibliographystyle{apalike}
+\bibliography{Marco_Rodriguez_Anteproyecto}
 
 \end{document}
 
