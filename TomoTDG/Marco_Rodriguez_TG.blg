@@ -1,0 +1,16 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: Marco_Rodriguez_TG.aux
+The style file: apalike.bst
+Database file #1: Marco_Rodriguez_TG.bib
+Warning--I'm ignoring QCGJ2018's extra "year" field
+--line 7 of file Marco_Rodriguez_TG.bib
+A bad cross reference---entry "RUIZ-AYALA2018"
+refers to entry "10.19053/20278306.v8.n2.2018.7971", which doesn't exist
+A bad cross reference---entry "QCGJ2018"
+refers to entry "10.29019/enfoqueute.v8n1.139", which doesn't exist
+Warning--I didn't find a database entry for "Alonso2018"
+Warning--I didn't find a database entry for "Alegsa2010"
+Warning--I didn't find a database entry for "10.29019/enfoqueute.v8n1.139"
+Warning--I didn't find a database entry for "10.19053/20278306.v8.n2.2018.7971"
+Warning--empty journal in QCGJ2018
+Warning--empty journal in RUIZ-AYALA2018
+(There were 2 error messages)

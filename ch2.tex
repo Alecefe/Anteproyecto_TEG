@@ -1,0 +1,137 @@
+% !TeX spellcheck = es_ES
+% !TeX encoding = ISO-8859-1
+
+
+\section{Sistema SCADA}
+
+\subsection{Definición}
+
+\section{Sistemas de medición de energía eléctrica}
+
+\subsection{Definición}
+
+\section{Medidores de energía}
+
+\subsection{Definición}
+
+Los medidores de consumo de energía eléctrica, también llamados contadores de energía debido a la tarea que desempeñan, son``Un instrumento destinado a medir la energía eléctrica integrando la potencia con respecto al tiempo" \hspace*{1mm} \cite{energy-m-IEC}. Las compañías de electricidad utilizan medidores de energía instalados en cada cliente con el propósito de monitorear y facturar el consumo. Debido a ello estos equipos suelen estar calibrados en unidades de facturación de energía, comúnmente se utiliza el kilovatio hora [kWh] y se lee el valor registrado en cada medidor una vez ha llegado el período de cobranza.\\
+
+Cuando se desea ahorrar energía durante ciertos periodos de tiempo, algunos medidores pueden registrar la demanda de energía, es decir el máximo uso de potencia en un intervalo de tiempo. Aplicar esta metodología de registro de demanda brinda la capacidad de variar las tarifas de electricidad durante el día, permitiendo registrar el consumo de cada usuario durante periodos de tarifas altas (picos de demanda) o en casos de tarifas bajas donde la demanda de energía en el sistema es baja y la energía menos costosa. Incluso en algunas áreas los medidores de energía poseen relés para desprendimiento de cargas durante períodos donde se registren picos muy altos de demanda.
+
+\subsection{Principio de funcionamiento}
+
+\subsubsection{Palabras a aclarar en la definición}
+
+\subsection{Clasificación de los medidores}
+
+Tomando como referencia lo que \cite{DianaL} refleja en su trabajo, los medidores de consumo de energía pueden agruparse mediante las siguientes clasificaciones.
+
+\subsubsection{Según el principio de funcionamiento}
+
+\begin{itemize}
+	\item[] \textbf{Medidores electromecánicos}: El tipo más común de medidor eléctrico, el registro de la energía se realiza mediante el conteo de las revoluciones de un disco metálico que es conductor eléctrico pero no conductor magnético. Este disco se hace rotar mediante la inducción electromagnética generada por la alimentación, a una velocidad proporcional a la potencia que pasa a través del medidor. El número de vueltas es entonces proporcional a el consumo de energía. 
+		
+	
+	\item[] \textbf{Medidores electrónicos}: De forma general este medidor está compuesto por la alimentación, un circuito de medición, un circuito de procesamiento (usualmente microcontroladores) y comunicación además de otros módulos agregados como un RTC, una pantalla de cristal líquido, un módulo de comunicación mediante infrarrojo, entre otros.\\
+	
+	El circuito de medición está compuesto por muestreadores y cuantificadores conectados a las entradas de corriente y tensión, así como a la referencia de tensión. Esto viene seguido por una sección de conversión analógica-digital para encontrar el equivalente digitalizado del valor de las entradas. Dichas entradas en formato digital son tratadas utilizando un procesador digital de señal para calcular los distintos parámetros de medición.
+		
+	Este tipo de medidor muestra la energía consumida en una pantalla LCD o LED, además de medir la energía consumida pueden también registrar otros parámetros de la carga y del suministro, como la tasa de demanda instantánea y máxima.
+	
+\end{itemize}
+
+\subsubsection{Según su construcción:}
+
+\begin{itemize}
+	\item[] \textbf{Medidor monofásico bifilar (una fase y neutro)}:\\
+	Está compuesto por una bobina de tensión y una de corriente. Su capacidad usualmente está entre 15 A y 60 A. 
+	
+	\item[] \textbf{Medidor bifásico bifilar (dos fases)}:\\
+	Está compuesto por dos bobinas de tensión y dos bobinas de corriente. Usualmente utilizado para medir la enegía eléctrica consumida por aparatos que funcionan con la tensión fase-fase residencial.
+	
+	\item[] \textbf{Medidor bifásico trifilar (dos fases y neutro)}:\\
+	Está compuesto por dos bobinas de tensión y dos bobinas de corriente. Se usa para medir la energía consumida por aparatos que requieran para su funcionamiento dos fases, con este medidor se puede medir la energía consumida por otros aparatos conectados a la misma instalación que funcionen con una sola fase.
+	
+	\item[] \textbf{Medidor trifásico tetrafilar (tres fases y neutro)}:\\ Está compuesto por tres bobinas de tensión y tres bobinas de corriente. Se utiliza para medir la energía consumida por aparatos que requieran funcionar con tres fases.
+	
+\end{itemize}
+
+\subsection{Infraestructura}
+
+La infraestructura de cada sistema de medición es la característica que delimita sus particularidades, ``El cambio de visión de la medición de energía eléctrica se realiza desde el año de 1970 con la incorporación del envío de datos, la comunicación en los años 70 era unidireccional, en una sola vía, desde el usuario hasta la empresa distribuidora. La primera etapa fue la medición AMR (Automatic Meter Reading) y duró alrededor de 30 años dando paso a la evolución, llamada medición inteligente o smart Metering. Smart metering requiere un alto grado de telecomunicaciones en ambas vías: usuario-empresa distribuidora." \hspace*{1mm} \cite{RuizM},
+
+La meta para el presente es llegar a una medición inteligente avanzada, incorporando a toda la red eléctrica dispositivos con la capacidad de operar por medio de telecomunicaciones, permitiendo equilibrar la generación de energía eléctrica al consumo real, por medio de los datos enviados por todos los medidores inteligentes.
+
+\subsection{Protocolos}
+
+asfgdfdgfsdafffdffgfggdfgfnfsfdfdfdfnwksdnas.gealfesa
+
+\section{Redes malladas}
+
+Lorem ipsumdsafnasodaodasodoñNOoñdsaodnfñnañoffmdklsfjdsgs
+
+\subsection{Definición}
+
+Lorem ipsumdsafnasodaodasodoñNOoñdsaodnfñnañoffmdklsfjdsgs
+
+\subsection{Caracteristicas}
+
+Lorem ipsumdsafnasodaodasodoñNOoñdsaodnfñnañoffmdklsfjdsgs
+
+\subsubsection{Palabras a aclarar en la definicion}
+
+Lorem ipsumdsafnasodaodasodoñNOoñdsaodnfñnañoffmdklsfjdsgs
+
+\section{Sistema operativo en tiempo real}
+
+Lorem ipsumdsafnasodaodasodoñNOoñdsaodnfñnañoffmdklsfjdsgs
+
+\section{Microcontrolador ESP32}	%Debe ir aqui o en la descripción del hardware?
+
+Lorem ipsumdsafnasodaodasodoñNOoñdsaodnfñnañoffmdklsfjdsgs
+
+\subsection{Descripción}
+
+Lorem ipsumdsafnasodaodasodoñNOoñdsaodnfñnañoffmdklsfjdsgs
+
+\subsection{Caracteristicas}
+
+Lorem ipsumdsafnasodaodasodoñNOoñdsaodnfñnañoffmdklsfjdsgs
+
+\newpage
+
+Un ejemplo de tabla es
+
+\begin{table}
+  \centering
+\begin{tabular}{llr}
+
+Gnat  & per gram & 13.65 \\
+      & each     &  0.01 \\
+Gnu   & stuffed  & 92.50 \\
+Emu   & stuffed  & 33.33 \\
+Armadillo & frozen & 8.99 \\
+\bottomrule
+\end{tabular}
+
+  \caption{Otra tabla}\label{Tab:otra}
+\end{table}
+
+
+\begin{table}
+  \centering
+  \caption{Ejemplo}\label{Tab:producion}
+\begin{tabular}{llr}
+\toprule
+\multicolumn{2}{c}{Item} \\
+\cmidrule(r){1-2}
+Animal & Description & Price (\$) \\
+\midrule
+Gnat  & per gram & 13.65 \\
+      & each     &  0.01 \\
+Gnu   & stuffed  & 92.50 \\
+Emu   & stuffed  & 33.33 \\
+Armadillo & frozen & 8.99 \\
+\bottomrule
+\end{tabular}
+\end{table}
