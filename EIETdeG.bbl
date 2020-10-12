@@ -1,13 +1,18 @@
 \begin{thebibliography}{}
 
+\bibitem[Alvarado, 2011]{MAlvarado}
+Alvarado, M. (2011).
+\newblock {Servicios de Medición Avanzada (AMI) para Redes Inteligentes y su
+  Adaptabilidad en el Marco de la Legislaci\'on Ecuatoriana}.
+
 \bibitem[IEC, 2007]{energy-m-IEC}
 IEC (2007).
 \newblock 313-01-35.
 \newblock Disponible en http://www.electropedia.org/iev/iev.nsf/
   display?openform\&ievref=313-01-35 , consultado en agosto 2020.
 
-\bibitem[Londo\'no, 2013]{DianaL}
-Londo\'no, D. (2013).
+\bibitem[Londono, 2013]{DianaL}
+Londono, D. (2013).
 \newblock Desarrollo de una gu\'ia enfocada a medidores de energ\'ia y
   conexiones de medidores.
 \newblock Obtenido desde https://core.ac.uk/download/pdf/71397220.pdf , en

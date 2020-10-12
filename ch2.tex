@@ -18,8 +18,6 @@ Los medidores de consumo de energía eléctrica, también llamados contadores de en
 
 Cuando se desea ahorrar energía durante ciertos periodos de tiempo, algunos medidores pueden registrar la demanda de energía, es decir el máximo uso de potencia en un intervalo de tiempo. Aplicar esta metodología de registro de demanda brinda la capacidad de variar las tarifas de electricidad durante el día, permitiendo registrar el consumo de cada usuario durante periodos de tarifas altas (picos de demanda) o en casos de tarifas bajas donde la demanda de energía en el sistema es baja y la energía menos costosa. Incluso en algunas áreas los medidores de energía poseen relés para desprendimiento de cargas durante períodos donde se registren picos muy altos de demanda.
 
-\subsection{Principio de funcionamiento}
-
 \subsubsection{Palabras a aclarar en la definición}
 
 \subsection{Clasificación de los medidores}
@@ -56,11 +54,47 @@ Tomando como referencia lo que \cite{DianaL} refleja en su trabajo, los medidore
 	
 \end{itemize}
 
-\subsection{Infraestructura}
+\subsection{Infraestructuras de medición de energía}
 
-La infraestructura de cada sistema de medición es la característica que delimita sus particularidades, ``El cambio de visión de la medición de energía eléctrica se realiza desde el año de 1970 con la incorporación del envío de datos, la comunicación en los años 70 era unidireccional, en una sola vía, desde el usuario hasta la empresa distribuidora. La primera etapa fue la medición AMR (Automatic Meter Reading) y duró alrededor de 30 años dando paso a la evolución, llamada medición inteligente o smart Metering. Smart metering requiere un alto grado de telecomunicaciones en ambas vías: usuario-empresa distribuidora." \hspace*{1mm} \cite{RuizM},
+La infraestructura de cada sistema de medición es la característica que delimita sus particularidades, ``El cambio de visión de la medición de energía eléctrica se realiza desde el año de 1970 con la incorporación del envío de datos, la comunicación en los años 70 era unidireccional, en una sola vía, desde el usuario hasta la empresa distribuidora. La primera etapa fue la medición AMR (Automatic Meter Reading) y duró alrededor de 30 años dando paso a la evolución, llamada medición inteligente o smart Metering. Smart metering requiere un alto grado de telecomunicaciones en ambas vías: usuario-empresa distribuidora." \hspace*{1mm} \cite{RuizM}.\\
 
-La meta para el presente es llegar a una medición inteligente avanzada, incorporando a toda la red eléctrica dispositivos con la capacidad de operar por medio de telecomunicaciones, permitiendo equilibrar la generación de energía eléctrica al consumo real, por medio de los datos enviados por todos los medidores inteligentes.
+La meta en cuanto a estos sistemas es llegar a una medición inteligente avanzada, es decir incorporar a toda la red eléctrica dispositivos con la capacidad de operar por medio de telecomunicaciones, permitiendo equilibrar la generación de energía eléctrica al consumo real, por medio de los datos enviados por todos los medidores inteligentes.\\
+
+Existen ciertos requerimientos para realizar una medición inteligente: alta confiabilidad, vida útil, interoperabilidad, rentabilidad, seguridad, consumo mínimo de energía, bajos costos de instalación y mantenimiento. La tecnología desarrollada debe cumplir con estos requerimientos para ser realmente funcional en el campo de la medición automática de consumo.\\
+
+Para realizar medición inteligente se pueden emplear diferentes tipos de tecnologías de telecomunicaciones de acuerdo al área de aplicación y al canal de transmisión. La figura \ref{fig:infraestructura} muestra los tipos de arquitecturas de comunicación que son empleadas en la medición inteligente. Los medios guiados para realizar telecomunicaciones incluyen la red telefónica pública conmutada (PSTN), PLC portadora en la línea de alimentación, Ethernet y cable módems. Los medios no guiados para realizar telecomunicaciones incluyen WiFi, ZigBee, infrarrojos, RFID y GSM / GPRS / CDMA celular.\\
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\linewidth]{img/infraestructura.png}
+	\caption{Infraestructura general de un sistema de medición avanzado. Tomado de ``Servicios de Medición Avanzada (AMI) para Redes Inteligentes y su Adaptabilidad en el Marco de la Legislación Ecuatoriana" \cite{MAlvarado}}
+	\label{fig:infraestructura}
+\end{figure}
+
+La infraestructura necesaria para la medición inteligente se divide en tres zonas de acuerdo al tipo de comunicación:
+
+\begin{itemize}
+	\item Red de área local (HAN).
+	\item Red de área de vecindad (NAN). 
+	\item Red de área amplia (WAN).
+\end{itemize}
+
+\subsubsection{Red de área local (Home Area Network)}
+
+Es un sistema integrado dentro de los hogares que permite la comunicación entre diferentes dispositivos inteligentes, el dispositivo límite de esta red es el medidor de energía eléctrica. Este tipo de redes puede utilizar comunicaciones cableadas como BPL (Broadband over Power Lines) o PLC (Power Line Carrier) pero también comunicaciones inalámbricas como redes privadas, una red de banda ancha o redes malladas para comunicarse con la red NAN.
+\\
+
+
+\subsubsection{Red de vecindad (Neighbourhood Area Network)}
+
+Este tipo de red permite la conexión entre múltiples HANs, es un sistema de interconexión entre redes de medidores inteligentes. El principal elemento que lo constituye es el concentrador. El concentrador es el dispositivo que actúa como un puente entre los contadores inteligentes y la puerta de enlace. El concentrador de datos detecta y gestiona los medidores inteligentes de forma automática, realiza lecturas de los consumos y transfiere la información a los centros de control, también facilitan los mensajes de diagnostico, actualizaciones de firmware y supervisión de las condiciones de loss medidores.\\
+
+
+\subsubsection{Red de área amplia (Wide Area Network)}
+
+Es la red encargada de conectar múltiples sistemas de distribución y actúa como un puente entre redes de menor tamaño y la red del cliente. Debe ofrecer una red de retorno para conectar los servicios de recolección de datos con las instalaciones del cliente. Dicha red de retorno puede adoptar una variedad de tecnologías (Ethernet, red celular, banda ancha) para transferir la información extraída de las redes NAN a las oficinas locales de servicios públicos. Una puerta de enlace perteneciente a la red WAN puede utilizar la conexión de banda ancha o una red basada en IP para proporcionar un acceso para que el cliente puede acceder a los datos requeridos. La privacidad, fiabilidad y seguridad de la información son los principales aspectos que se evalúan en este tipo de redes.
+
 
 \subsection{Protocolos}
 
