@@ -13,34 +13,32 @@
 \contentsline {chapter}{MARCO REFERENCIAL}{7}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Sistema SCADA}{7}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Definición}{7}{subsection.2.1.1}%
-\contentsline {section}{\numberline {2.2}Sistemas de medición de energía eléctrica}{7}{section.2.2}%
+\contentsline {section}{\numberline {2.2}Fundamentos de medición consumo de energía eléctrica}{7}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Definición}{7}{subsection.2.2.1}%
-\contentsline {section}{\numberline {2.3}Medidores de energía}{7}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Definición}{7}{subsection.2.3.1}%
-\contentsline {subsubsection}{Palabras a aclarar en la definición}{8}{subsubsection*.7}%
-\contentsline {subsection}{\numberline {2.3.2}Clasificación de los medidores}{8}{subsection.2.3.2}%
-\contentsline {subsubsection}{Según el principio de funcionamiento}{8}{subsubsection*.8}%
-\contentsline {subsubsection}{Según su construcción:}{9}{subsubsection*.9}%
-\contentsline {subsection}{\numberline {2.3.3}Infraestructuras de medición de energía}{10}{subsection.2.3.3}%
-\contentsline {subsubsection}{Red de área local (Home Area Network)}{12}{subsubsection*.10}%
-\contentsline {subsubsection}{Red de vecindad (Neighbourhood Area Network)}{12}{subsubsection*.11}%
-\contentsline {subsubsection}{Red de área amplia (Wide Area Network)}{13}{subsubsection*.12}%
-\contentsline {subsection}{\numberline {2.3.4}Protocolos}{13}{subsection.2.3.4}%
-\contentsline {section}{\numberline {2.4}Redes malladas}{13}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Definición}{13}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Caracteristicas}{13}{subsection.2.4.2}%
-\contentsline {subsubsection}{Palabras a aclarar en la definicion}{14}{subsubsection*.13}%
-\contentsline {section}{\numberline {2.5}Sistema operativo en tiempo real}{14}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Microcontrolador ESP32}{14}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Descripción}{14}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Caracteristicas}{14}{subsection.2.6.2}%
-\contentsline {chapter}{MARCO METODOLÓGICO}{16}{chapter.3}%
-\contentsline {chapter}{DEFINICIÓN Y DESCRIPCIÓN DEL HARDWARE}{17}{chapter.4}%
-\contentsline {chapter}{DEFINICIÓN Y DESCRIPCIÓN DEL SOFTWARE}{18}{chapter.5}%
-\contentsline {chapter}{PRUEBAS Y RESULTADOS}{19}{chapter.6}%
-\contentsline {chapter}{CONCLUSIONES}{20}{chapter.7}%
-\contentsline {chapter}{RECOMENDACIONES}{21}{chapter.8}%
-\contentsline {chapter}{TÍTULO DEL ANEXO}{22}{appendix.Alph1}%
-\contentsline {chapter}{TÍTULO DEL ANEXO}{23}{appendix.Alph2}%
-\contentsline {chapter}{TÍTULO DEL ANEXO}{24}{appendix.Alph3}%
-\contentsline {chapter}{REFERENCIAS}{25}{appendix*.14}%
+\contentsline {subsection}{\numberline {2.2.2}Clasificación de los medidores}{8}{subsection.2.2.2}%
+\contentsline {subsubsection}{Según el principio de funcionamiento}{8}{section*.7}%
+\contentsline {subsubsection}{Según su construcción:}{9}{section*.8}%
+\contentsline {subsection}{\numberline {2.2.3}Infraestructuras de medición de energía}{10}{subsection.2.2.3}%
+\contentsline {subsubsection}{Red de área local (Home Area Network)}{12}{section*.9}%
+\contentsline {subsubsection}{Red de vecindad (Neighbourhood Area Network)}{12}{section*.10}%
+\contentsline {subsubsection}{Red de área amplia (Wide Area Network)}{13}{section*.11}%
+\contentsline {subsection}{\numberline {2.2.4}Normativa aplicada a las redes de medición}{14}{subsection.2.2.4}%
+\contentsline {subsubsection}{Modelo OSI}{14}{section*.12}%
+\contentsline {subsubsection}{GWAC}{16}{section*.13}%
+\contentsline {section}{\numberline {2.3}Redes WiFi malladas}{18}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Definición}{18}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Caracteristicas}{18}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Sistema operativo en tiempo real}{19}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Microcontrolador ESP32}{19}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Descripción}{19}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Caracteristicas}{19}{subsection.2.5.2}%
+\contentsline {chapter}{MARCO METODOLÓGICO}{21}{chapter.3}%
+\contentsline {chapter}{DEFINICIÓN Y DESCRIPCIÓN DEL HARDWARE}{22}{chapter.4}%
+\contentsline {chapter}{DEFINICIÓN Y DESCRIPCIÓN DEL SOFTWARE}{23}{chapter.5}%
+\contentsline {chapter}{PRUEBAS Y RESULTADOS}{24}{chapter.6}%
+\contentsline {chapter}{CONCLUSIONES}{25}{chapter.7}%
+\contentsline {chapter}{RECOMENDACIONES}{26}{chapter.8}%
+\contentsline {chapter}{TÍTULO DEL ANEXO}{27}{appendix.Alph1}%
+\contentsline {chapter}{TÍTULO DEL ANEXO}{28}{appendix.Alph2}%
+\contentsline {chapter}{TÍTULO DEL ANEXO}{29}{appendix.Alph3}%
+\contentsline {chapter}{REFERENCIAS}{30}{appendix*.14}%

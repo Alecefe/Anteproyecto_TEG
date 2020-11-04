@@ -44,14 +44,15 @@
 %\usepackage[comma,authoryear]{natbib} esto est? abajo
 
 %========= Define el estilo de referencias APA ===============
-\usepackage[natbibapa]{apacite}%natbibapa
+%\usepackage[natbibapa]{apacite}%natbibapa
+\usepackage[numbers]{natbib}%natbibapa
 %\usepackage[apaciteclassic]{apacite}%natbibapa
-\usepackage[compact]{titlesec} %modificar espaciado
+%\usepackage[compact]{titlesec} %modificar espaciado
 
 
 \usepackage{url}
 %\usepackage{hyperref}
-\usepackage[colorlinks=true,urlcolor=red,citecolor=black,anchorcolor=black,linkcolor=black]{hyperref}
+\usepackage[colorlinks=true,urlcolor=black,citecolor=black,anchorcolor=black,linkcolor=black]{hyperref}
 
 \UseRawInputEncoding
 
@@ -77,6 +78,16 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Source in images
+\newcommand*{\captionsource}[2]{%
+	\caption[{#1}]{%
+		#1%
+		\\%
+		\textbf{Fuente:} #2%
+	}%
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %\setcounter{MaxMatrixCols}{10}
@@ -343,7 +354,7 @@ xvii, 144 pp.}
 %==================================================================
 \chapter{MARCO METODOLÓGICO}\label{CAP:met}
 %\markboth{Tu Primer Cap?tulo}{Tu Primer Cap?tulo}%
-%\input{ch2.tex}%
+%\input{ch3.tex}%
 
 %==================================================================
 \chapter{DEFINICIÓN Y DESCRIPCIÓN DEL HARDWARE}\label{CAP:hard}
@@ -400,8 +411,8 @@ xvii, 144 pp.}
 
 % References here (outcomment the appropriate case)
 % CASE 1: BiBTeX used to constantly update the references (while the paper is being written).
-%\bibliographystyle{IEEEtranSN}%{IEEEtranS}%%% outcomment this and next line in Case 1 siam
-\bibliographystyle{apalike}%
+\bibliographystyle{IEEEtran}%%% outcomment this and next line in Case 1 siam
+%\bibliographystyle{apalike}%
 \renewcommand{\bibname}{REFERENCIAS}
 \let\oldbibsection\bibsection
 \bibliography{MRTG} % if more than one, comma separated and without extension bib
@@ -412,7 +423,7 @@ xvii, 144 pp.}
 
 
 %==================================================================
-\markboth{index}{index}%
+%\markboth{index}{index}%
 %\addcontentsline{toc}{chapter}{?ndice alfab?tico}%
 \printindex%
 

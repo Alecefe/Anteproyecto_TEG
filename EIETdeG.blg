@@ -1,12 +1,18 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: EIETdeG.aux
-The style file: apalike.bst
+The style file: IEEEtran.bst
 Database file #1: MRTG.bib
 Warning--entry type for "RuizM" isn't style-file defined
---line 27 of file MRTG.bib
-Warning--entry type for "energy-m-IEC" isn't style-file defined
---line 44 of file MRTG.bib
+--line 19 of file MRTG.bib
+Warning--entry type for "VazquezA" isn't style-file defined
+--line 28 of file MRTG.bib
 Warning--entry type for "DianaL" isn't style-file defined
---line 53 of file MRTG.bib
+--line 46 of file MRTG.bib
 Warning--I didn't find a database entry for "brea5"
 Warning--I didn't find a database entry for "brigham1"
-(There were 5 warnings)
+Warning--I didn't find a database entry for "MBahr"
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+
+Done.
+(There were 6 warnings)
