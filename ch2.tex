@@ -142,11 +142,11 @@ La integración de la automatización asociada con los recursos eléctricos es impo
 \end{figure}
 
 
-\section{Redes WiFi malladas}
+\section{Redes malladas}
 
 \subsection{Definición}
 
-Una red WiFi mallada se puede definir como una red que permite la comunicación entre nodos a través de múltiples saltos en una topología mallada \cite{MBahr}. Un nodo es la unidad mínima de la red,
+Una red WiFi mallada se puede definir como una red que permite la comunicación entre nodos a través de múltiples saltos en una topología mallada \cite{bahr}. Un nodo es la unidad mínima de la red,
 estas unidades son las encargadas de generar los enlaces entre los dispositivos usuarios que construyen la red mallada. 
 
 Por lo general estas redes poseen clientes, enrutadores y puertas de enlace. Los clientes son dispositivos electrónicos, sistemas embebidos o sensores que pueden comunicarse con otros en la red. El enrutador es un dispositivo electrónico que sirve como un intermediario entre dos o más redes para transportar los datos de una red a otra. Y las compuertas de enlace son dispositivos electrónicos que conectan la red con Internet. \cite{VazquezA}
@@ -157,25 +157,145 @@ Cuando un nodo no puede operar, el resto de los nodos en la red WiFi mallada aún
 
 \subsection{Caracteristicas}
 
-Internet es el ejemplo más conocido de una red mallada, puesto que internet es una red con una gigantesca cantidad de nodos en los que el mensaje sale de un nodo y llega a otro e entre las ventajas más relevantes de esta topología
+La red de Internet como la conocemos es el ejemplo más conocido y similar a una red mallada, puesto que Internet es una red con gran cantidad de nodos en los que el mensaje es enviado desde un punto y es recibido en otro mediante un enrutado inherente a la red. Tomando este ejemplo como base se pueden delimitar algunas características de esta topología de red:\\
 
-Lorem ipsumdsafnasodaodasodoñNOoñdsaodnfñnañoffmdklsfjdsgs
+\begin{itemize}
+	\item Permite que el camino recorrido por el mensaje entre un punto y otro sea dinámico, es decir, que la ruta que toma el mensaje cambie si se requiere debido a la ocurrencia de algún evento que impidan la comunicación con un nodo intermedio específico.
+	\item Ofrece una mayor cantidad de rutas posibles para el mensaje ya que idealmente cada nodo puede conectarse con cualquier otro directamente o a través de terceros.
+	\item Cada nodo posee un identificador único en la red que lo diferencia de los demás nodos para que no haya errores en el direccionamiento de la información.
+\end{itemize}
+
+\subsubsection{Sobre los protocolos de enrutamiento en las redes Malladas}
+
+ Esta capacidad de elegir la ruta debe estar basada en algoritmos para determinar el camino óptimo que será recorrido por el mensaje. Este algoritmo de enrutamiento debe tomar en cuenta las distintas condiciones que puede presentar el medio de transmisión, las interferencias o ruido que pueda existir según la banda de transmisión, la posible colisión de datos en un nodo, etc, para así determinar hacia dónde debe ir el mensaje en cada nodo para llegar a su destino.\\
+ 
+ La implementación de topologías malladas en sistemas embebidos ha encontrado problemas en la necesidad de procedimientos adicionales relacionados con el enrutamiento. Hay algunos ejemplos de protocolos que soportan la red mallada sobre una red IP, por ejemplo el protocolo B.A.T.M.A.N (Better Approach To Mobile Adhoc Networking), Babel (Protocolo de distancia de vector para IPv6 y IPv4 con  propiedades de convergencia rápida), HWMP (Protocolo Híbrido Inalámbrico Mallado), entre otros \cite{VazquezA}. El problema surge en la implementación de la pila TCP/IP en estos sistemas puesto que un sistema embebido posee recursos de cómputo limitados. Es por ello que se debe seleccionar según la aplicación el poder de cómputo necesario y la topología de la red que se requiere para cumplir con cada solución. Se describirán algunas redes WiFi malladas, con funcionamiento caracterizado según la aplicación:
+ 
+ 
+ 
+ Para que el mensaje tenga un destinatario debe existir una manera de identificar cada nodo de una red mallada, en el caso de la red mallada WiFi se utiliza la dirección MAC para diferenciar un nodo de otro.
+ 
+ \subsubsection{Direccionamiento por MAC}
+ 
+ En una red de computadoras, la dirección MAC es un valor único asociado a  un adaptador de red. La dirección MAC también es conocida como dirección de hardware o dirección física del adaptador \cite{VazquezA}. Las direcciones MAC se componen de doce números hexadecimales (48 bits de longitud). Por convención las direcciones MAC son escritas en uno de los dos
+ formatos siguientes:
+ 
+ \begin{equation}
+ 	MM:MM:MM:SS:SS:SS \hspace{.5cm} o \hspace{.5cm} MM-MM-MM-SS-SS-SS
+ \end{equation}
+ 
+ La primera mitad de la dirección MAC contiene el número identificador del fabricante del adaptador (i.e. 00:A0:C9:14:C8:29). Dichos identificadores están regulados por un estándar de Internet. La segunda parte de la dirección MAC representa el número de serial asignado al adaptador por el fabricante. \cite{VazquezA}
 
 \section{Sistema operativo en tiempo real}
 
-Lorem ipsumdsafnasodaodasodoñNOoñdsaodnfñnañoffmdklsfjdsgs
+Un sistema operativo es un conjunto de órdenes y programas de un sistema informático que gestiona los recursos de hardware y provee servicios que permiten el funcionamiento de otros programas.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.25\linewidth]{img/osMarcoTeorico.png}
+	\caption{Interacción del OS con otras capas del sistema informático.}
+	\label{fig:osmarcoteorico}
+\end{figure}
+
+
+%Las aplicaciones ejecutan las funcionalidades que el usuario quiere o necesita. Los servicios del sistema operativo hace el desarrollo de aplicaciones rápido, simple, y mantenible.
+
+La ventaja de utilizar sistemas operativos es que estos permiten gestionar los recursos de modo que se puedan ejecutar múltiples órdenes al mismo tiempo. Aunque en realidad cada procesador solo está ejecutando una orden a la vez, el sistema operativo es esa capa de abstracción que simula la ejecución en paralelo de varias tareas.
+
+%La mayoría de los sistemas operativos permiten que se ejecuten múltiples programas al mismo tiempo. Es es llamado multi-tarea. Aunque, en realidad, cada procesador solo puede correr una tarea. Una parte del sistema operativo es llamado planificador,y es responsable de la decisión cual programa correr y cuando, así da la ilusión de la ejecución simultanea de tareas mientras conmuta rápidamente entre cada programa [17]
+
+\subsection{FreeRTOS}
 
 \section{Microcontrolador ESP32}	%Debe ir aqui o en la descripción del hardware?
-
-Lorem ipsumdsafnasodaodasodoñNOoñdsaodnfñnañoffmdklsfjdsgs
-
 \subsection{Descripción}
 
-Lorem ipsumdsafnasodaodasodoñNOoñdsaodnfñnañoffmdklsfjdsgs
+El ESP-32 es un chip con integración WiFi y Bluetooth diseñado con la
+tecnología de ultra bajo consumo de 40 nm. Este microcontrolador esta diseñado para aplicaciones móviles, electrónicos personales, y de Internet de las cosas (IoT). Posee características de bajo consumo, incluyendo reloj de alta precisión, múltiples estados de energía, y escalamiento de consumo dinámico.
+
+Además es una solución integrada, que ya posee WiFi, Bluetooth, junto con alrededor de 20 componentes externos. El chip incluye una interruptor de antena, acoplador de radio-frecuencia, amplificador de potencia, amplificador de recepción de bajo ruido, filtros, y módulos de administración de consumo.
+
+Este microcontrolador posee dos núcleos CPU que pueden ser individualmente controlados, con un reloj ajustable entre 80 MHz y 120 MHz. Además, usa el sistema operativo en tiempo real freeRTOS y tensión de alimentación nominal de 3,3 V.
 
 \subsection{Caracteristicas}
 
-Lorem ipsumdsafnasodaodasodoñNOoñdsaodnfñnañoffmdklsfjdsgs
+\subsubsection{WiFi}
+
+\begin{itemize}
+	\item 802.11 b/g/n.
+	\item 802.11 n (hasta 150Mbps).
+	\item WMM.
+	\item TX/RX A-MPDU, RX A-MSDU.
+	\item Bloque de ACK inmediato.
+	\item Defragmentación.
+	\item Monitorización de faro automático (Hardware TSF).
+	\item 4 interfaces virtuales WiFi.
+	\item Soporte simultaneo para estación, Punto de acceso y modo promiscuo.
+	\item Diversidad de antena.
+\end{itemize}
+
+\subsubsection{CPU y Memoria}
+
+\begin{itemize}
+	\item Doble núcleo Xtensa de 32 bits, hasta 600 MIPS.
+	\item 448 kB ROM.
+	\item 520 kB SRAM.
+	\item 16 kB SRAM en RTC.
+	\item Memoria flash embebida de hasta 16MB
+\end{itemize}
+
+\subsubsection{Relojes y temporizadores}
+
+\begin{itemize}
+	\item Oscilador interno con calibración de 8MHz, RC
+	\item Oscilador externo de cristal desde 2 a 60MHz.
+	\item Dos grupos de temporizadores, incluyendo 2x64-bits con un perro guardián en cada uno.
+	\item TX/RX A-MPDU, RX A-MSDU.
+	\item Un temporizador y un perro guardián RTC.
+\end{itemize}
+
+\subsubsection{Periféricos}
+
+\begin{itemize}
+	\item 34 GPIO mapeables.
+	\item ADC de 12 bits con hasta 18 canales.
+	\item Do convertidores de digital a analógico
+	\item 10 sensores táctiles.
+	\item 4 SPI, 2 $I^{2}C$, 3 UART
+	\item 1 host (SD/eMMC/SDIO)
+	\item Interfaz de MAC Ethernet con DMA dedicado y soporte IEEE 1588.
+	\item CAN 2.0.
+	\item Soporte simultaneo para estación, Punto de acceso y modo promiscuo.
+	\item IR (TX/RX).
+	\item Motor PWM.
+	\item LED PWM hasta de 16 canales
+	\item Sensor Hall.
+\end{itemize}
+
+\subsubsection{Seguridad}
+
+\begin{itemize}
+	\item Modo Boot seguro.
+	\item Encriptación de flash.
+	\item 1024-bits OTP, hasta 768-bit clientes
+	\item Aceleración de criptografía por hardware:
+	\begin{itemize}
+		\item AES.
+		\item SHA-2
+		\item RSA
+		\item ECC
+	\end{itemize}
+	\item 4 SPI, 2 $I^{2}C$, 3 UART
+	\item 1 host (SD/eMMC/SDIO)
+	\item Interfaz de MAC Ethernet con DMA dedicado y soporte IEEE 1588.
+	\item CAN 2.0.
+	\item Soporte simultaneo para estación, Punto de acceso y modo promiscuo.
+	\item IR (TX/RX).
+	\item Motor PWM.
+	\item LED PWM hasta de 16 canales
+	\item Sensor Hall.
+\end{itemize}
+
+
 
 \newpage
 

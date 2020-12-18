@@ -44,6 +44,11 @@ M.~Ruiz, ``Interoperabilidad entre medidores inteligentes de energ\'ia
 M.~Alvarado, ``Servicios de medici\'on avanzada {(AMI)} para redes inteligentes
   y su adaptabilidad en el marco de la legislaci\'on ecuatoriana,'' 2011.
 
+\bibitem{bahr}
+M.~Bahr, ``Update on the hybrid wireless mesh protocol of {IEEE} 802.11s,''
+  \emph{Siemens Corporate Technology, Information and Communications}, p.~1, 10
+  2016.
+
 \bibitem{VazquezA}
 A.~Vazquez, ``Dise\~no e implementaci\'on de una red wifi mallada que soporte
   protocolo modbus para equipos de control industrial.'' 2020, consultado en

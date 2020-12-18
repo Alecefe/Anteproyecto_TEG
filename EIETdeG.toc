@@ -1,9 +1,9 @@
 \babel@toc {spanish}{}
 \contentsline {chapter}{RECONOCIMIENTOS Y AGRADECIMIENTOS}{\es@scroman {iii}}{chapter*.1}%
 \contentsline {chapter}{ÍNDICE GENERAL}{\es@scroman {viii}}{chapter*.2}%
-\contentsline {chapter}{LISTA DE FIGURAS}{\es@scroman {x}}{chapter*.3}%
-\contentsline {chapter}{LISTA DE TABLAS}{\es@scroman {xi}}{chapter*.4}%
-\contentsline {chapter}{LISTA DE ACRÓNIMOS}{\es@scroman {xii}}{chapter*.5}%
+\contentsline {chapter}{LISTA DE FIGURAS}{\es@scroman {xi}}{chapter*.3}%
+\contentsline {chapter}{LISTA DE TABLAS}{\es@scroman {xii}}{chapter*.4}%
+\contentsline {chapter}{LISTA DE ACRÓNIMOS}{\es@scroman {xiii}}{chapter*.5}%
 \contentsline {chapter}{INTRODUCCIÓN}{1}{chapter*.6}%
 \contentsline {chapter}{CONCEPTUALIZACIÓN DEL PROYECTO}{3}{chapter.1}%
 \contentsline {section}{\numberline {1.1}PLANTEAMIENTO DEL PROBLEMA}{3}{section.1.1}%
@@ -25,20 +25,30 @@
 \contentsline {subsection}{\numberline {2.2.4}Normativa aplicada a las redes de medición}{14}{subsection.2.2.4}%
 \contentsline {subsubsection}{Modelo OSI}{14}{section*.12}%
 \contentsline {subsubsection}{GWAC}{16}{section*.13}%
-\contentsline {section}{\numberline {2.3}Redes WiFi malladas}{18}{section.2.3}%
+\contentsline {section}{\numberline {2.3}Redes malladas}{18}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Definición}{18}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Caracteristicas}{18}{subsection.2.3.2}%
-\contentsline {section}{\numberline {2.4}Sistema operativo en tiempo real}{19}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Microcontrolador ESP32}{19}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Descripción}{19}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Caracteristicas}{19}{subsection.2.5.2}%
-\contentsline {chapter}{MARCO METODOLÓGICO}{21}{chapter.3}%
-\contentsline {chapter}{DEFINICIÓN Y DESCRIPCIÓN DEL HARDWARE}{22}{chapter.4}%
-\contentsline {chapter}{DEFINICIÓN Y DESCRIPCIÓN DEL SOFTWARE}{23}{chapter.5}%
-\contentsline {chapter}{PRUEBAS Y RESULTADOS}{24}{chapter.6}%
-\contentsline {chapter}{CONCLUSIONES}{25}{chapter.7}%
-\contentsline {chapter}{RECOMENDACIONES}{26}{chapter.8}%
-\contentsline {chapter}{TÍTULO DEL ANEXO}{27}{appendix.Alph1}%
-\contentsline {chapter}{TÍTULO DEL ANEXO}{28}{appendix.Alph2}%
-\contentsline {chapter}{TÍTULO DEL ANEXO}{29}{appendix.Alph3}%
-\contentsline {chapter}{REFERENCIAS}{30}{appendix*.14}%
+\contentsline {subsubsection}{Sobre los protocolos de enrutamiento en las redes Malladas}{19}{section*.14}%
+\contentsline {subsubsection}{Direccionamiento por MAC}{20}{section*.15}%
+\contentsline {section}{\numberline {2.4}Sistema operativo en tiempo real}{21}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}FreeRTOS}{21}{subsection.2.4.1}%
+\contentsline {section}{\numberline {2.5}Microcontrolador ESP32}{21}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Descripción}{21}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Caracteristicas}{22}{subsection.2.5.2}%
+\contentsline {subsubsection}{WiFi}{22}{section*.16}%
+\contentsline {subsubsection}{CPU y Memoria}{23}{section*.17}%
+\contentsline {subsubsection}{Relojes y temporizadores}{23}{section*.18}%
+\contentsline {subsubsection}{Periféricos}{23}{section*.19}%
+\contentsline {subsubsection}{Seguridad}{24}{section*.20}%
+\contentsline {chapter}{MARCO METODOLÓGICO}{27}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Definición y Descripción del Software}{27}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Definición y Descripción del Hardware}{29}{section.3.2}%
+\contentsline {chapter}{DEFINICIÓN Y DESCRIPCIÓN DEL HARDWARE}{30}{chapter.4}%
+\contentsline {chapter}{DEFINICIÓN Y DESCRIPCIÓN DEL SOFTWARE}{31}{chapter.5}%
+\contentsline {chapter}{PRUEBAS Y RESULTADOS}{32}{chapter.6}%
+\contentsline {chapter}{CONCLUSIONES}{33}{chapter.7}%
+\contentsline {chapter}{RECOMENDACIONES}{34}{chapter.8}%
+\contentsline {chapter}{TÍTULO DEL ANEXO}{35}{appendix.Alph1}%
+\contentsline {chapter}{TÍTULO DEL ANEXO}{36}{appendix.Alph2}%
+\contentsline {chapter}{TÍTULO DEL ANEXO}{37}{appendix.Alph3}%
+\contentsline {chapter}{REFERENCIAS}{38}{appendix*.21}%
