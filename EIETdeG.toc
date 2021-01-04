@@ -40,15 +40,24 @@
 \contentsline {subsubsection}{Relojes y temporizadores}{23}{section*.18}%
 \contentsline {subsubsection}{Periféricos}{23}{section*.19}%
 \contentsline {subsubsection}{Seguridad}{24}{section*.20}%
-\contentsline {chapter}{MARCO METODOLÓGICO}{27}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Definición y Descripción del Software}{27}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Definición y Descripción del Hardware}{29}{section.3.2}%
-\contentsline {chapter}{DEFINICIÓN Y DESCRIPCIÓN DEL HARDWARE}{30}{chapter.4}%
-\contentsline {chapter}{DEFINICIÓN Y DESCRIPCIÓN DEL SOFTWARE}{31}{chapter.5}%
-\contentsline {chapter}{PRUEBAS Y RESULTADOS}{32}{chapter.6}%
-\contentsline {chapter}{CONCLUSIONES}{33}{chapter.7}%
-\contentsline {chapter}{RECOMENDACIONES}{34}{chapter.8}%
-\contentsline {chapter}{TÍTULO DEL ANEXO}{35}{appendix.Alph1}%
-\contentsline {chapter}{TÍTULO DEL ANEXO}{36}{appendix.Alph2}%
-\contentsline {chapter}{TÍTULO DEL ANEXO}{37}{appendix.Alph3}%
-\contentsline {chapter}{REFERENCIAS}{38}{appendix*.21}%
+\contentsline {chapter}{DEFINICIÓN Y DESCRIPCIÓN DEL HARDWARE}{27}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Definición y Descripción del Hardware}{27}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Definición}{27}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Descripción}{27}{subsection.3.1.2}%
+\contentsline {chapter}{DEFINICIÓN Y DESCRIPCIÓN DEL SOFTWARE}{28}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Definición del software}{28}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Descripción del software}{30}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Tablas de particiones en el ESP32}{30}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Modo de operación}{33}{subsection.4.2.2}%
+\contentsline {subsubsection}{La red mallada y el nodo central}{34}{section*.21}%
+\contentsline {subsubsection}{Nodo Repetidor}{34}{section*.22}%
+\contentsline {subsubsection}{Nodo serial RS485}{34}{section*.23}%
+\contentsline {subsubsection}{Nodo de entrada por pulsos}{34}{section*.24}%
+\contentsline {subsection}{\numberline {4.2.3}Modo de configuración}{34}{subsection.4.2.3}%
+\contentsline {chapter}{PRUEBAS Y RESULTADOS}{35}{chapter.5}%
+\contentsline {chapter}{CONCLUSIONES}{36}{chapter.6}%
+\contentsline {chapter}{RECOMENDACIONES}{37}{chapter.7}%
+\contentsline {chapter}{TÍTULO DEL ANEXO}{38}{appendix.Alph1}%
+\contentsline {chapter}{TÍTULO DEL ANEXO}{39}{appendix.Alph2}%
+\contentsline {chapter}{TÍTULO DEL ANEXO}{40}{appendix.Alph3}%
+\contentsline {chapter}{REFERENCIAS}{41}{appendix*.25}%
