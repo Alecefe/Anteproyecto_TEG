@@ -1,0 +1,107 @@
+% !TeX encoding = ISO-8859-1
+% !TeX spellcheck = es_ES
+
+\section{Definición del software}
+
+Para el objetivo planteado en este proyecto, se requiere el uso de un microcontrolador por lo que se debe implementar un programa o firmware para configurar y utilizar, de manera correcta, los periféricos correspondientes a las conexiones inalámbricas y el manejo de datos seriales; además es necesario un protocolo de conexión hacia un agente externo que permita enviar los datos recolectados por la infraestructura, una infraestructura que debe ser creada mediante este firmware y como método de configuración de los nodos una interfaz gráfica de usuario (GUI) que le permita a la red adaptarse de manera sencilla al lugar donde se instale.\\
+
+
+El firmware en el microcontrolador (ESP32) debe ser capaz de iniciar en dos modos: el modo de operación y el modo de configuración. El modo de inicio debe ser controlado por el usuario.\\
+
+
+La rutina de configuración debe ofrecer al usuario una interfaz gráfica donde se pueda modificar todos los parámetros que sean necesarios para establecer la conexión con el punto de acceso local, del mismo modo se debe conectar la red con el agente externo y realizar el envío de datos; los parámetros de funcionamiento de la parte serial de cada nodo para extraer desde los medidores la información y los necesarios en la red mallada para establecer la cantidad de conexiones y el registro de nodos en la red; además del usuario y contraseña de acceso a dicha página. Por último debe ofrecer el reinicio del micro en su modo de operación para que una vez que estén configurados los parámetros se realiza de manera inmediata la puesta en marcha.\\
+
+
+Por otra parte, la rutina de configuración debe detenerse en caso de que faltase algún parámetro fundamental para el funcionamiento, en caso contrario debe ir activando etapa por etapa los procesos para: configurar los periféricos necesarios, activar la conexión inalámbrica, conectarse con el punto de acceso y registrarse en la red mallada.\\
+
+
+Las operaciones anteriores son compartidas en todos los nodos y son necesarias para entrar en la red. Las siguientes rutinas a ejecutarse dependen de la jerarquía que posee el nodo en la red mallada y de la función que se haya configurado para el nodo en la interfaz gráfica. La jerarquía que tiene un nodo dependerá de la intensidad de señal de este respecto al punto de acceso.\\
+
+En caso de ser el nodo de mayor jerarquía, dicho nodo será el encargado de gestionar la comunicación de la red con el exterior, este nodo servirá como el enlace para enviar y recibir la información para toda la red. Además a partir de este nodo se formará el resto de la topología de red mallada.\\
+
+Los demás nodos deben ser repetidores para que la señal pueda abarcar el espacio físico necesario o nodos conectados a medidores para la extracción de datos. Estas dos rutinas no deben ser excluyentes, los nodos deben tener la capacidad de ser repetidores y extraer datos al mismo tiempo.\\
+
+Hay dos rutinas principales para la extracción de datos, una mediante la salida de calibración del medidor y otra que se conecta a un bus serial RS485. La rutina de extracción de datos debe estar configurada para que se utilice el método necesario según el medidor. En caso de que los datos sean extraídos por la salida de calibración del medidor se debe diseñar una rutina para contar y almacenar los pulsos que esta genera considerando la cantidad inicial de kWh, esto por ser el registro que se desea transmitir debe estar almacenado de manera persistente y debe estar protegido contra pérdidas de alimentación. Por el contrario si en el nodo los datos son adquiridos mediante un bus serial, la persistencia de datos es realizada por el medidor, entonces la rutina en este caso solo debe encargarse de la trama serial. En ambos casos una vez adquiridos los datos se deben enviar a la red exterior cuando sean solicitados.
+
+\section{Descripción del software}
+
+\textbf{Agregar un diagrama de bloques con explicación de los principales bloques de la aplicación.}
+
+\subsection{Tablas de particiones en el ESP32}
+
+Un código cualquiera en el ESP32 puede contener múltiples aplicaciones, así como muchos tipos diferentes de datos (datos de calibración, sistemas de archivos, almacenamiento de parámetros, etc.) es por esto que las tablas de particiones se encuentran con un offset para cada código en cuestión en la memoria flash.
+
+En cada grabado se utiliza un archivo de tabla de particiones por defecto que es definida en el menú de configuraciones también llamado \textit{menuconfig}, hay dos tablas modelos para utilizar en este menú: \textit{Aplicación única de fábrica, sin OTA} (\ref{Tab:Partition_Table_example}) y \textit{Aplicación de fábrica, dos definiciones OTA}. La diferencia entre ambas tablas radica en la cantidad de particiones en la memoria flash y cómo son utilizadas: La aplicación sin \textit{OTA} solo posee un código para arranque de tipo \textit{app} en la tabla de particiones, mientras que la tabla de dos definiciones \textit{OTA} posee dos códigos para iniciar el micro y es el gestor de arranque mediante ciertas reglas el que decide cuál data de tipo \textit{app} poner en marcha. Este último modelo de tabla es útil cuando se quiere incorporar actualizaciones inalámbricas del programa en el micro también llamadas \textit{Over The Air updates (OTA)}.\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/TablasOTA}
+	\caption{Diagrama ilustrativo de la memoria flash para los modelos de tablas de partición}
+	\label{fig:tablasota}
+\end{figure}
+
+En este proyecto se utiliza una aplicación única sin actualizaciones inalámbricas por lo que se utilizó el primer modelo de tabla, cuyas estructuras en archivo CSV se especifican a continuación:
+
+\begin{table}[H]
+	\centering
+	\caption{ESP-IDF Tabla de Particiones por defecto (Aplicación única de fábrica, sin OTA)}
+	\label{Tab:Partition_Table_example}
+	\medskip
+	\begin{tabular}{llllll}
+		\toprule
+		Name & Type & SubType & Offset & Size & Flags\\
+		\midrule
+		nvs &      data& nvs&    0x9000&  0x6000 & \\
+		phyinit& data& phy& 0xf000& 0x1000& \\
+		factory&  app&  factory& 0x10000& 1M& \\	
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+Con un desplazamiento de 0x10000 (64KB) en la flash, se encuentra la aplicación llamada "fábrica". El gestor de arranque ejecutará esta aplicación de forma predeterminada. También hay dos regiones de datos definidas en la tabla de particiones para almacenar la partición de la biblioteca \textit{NVS} y los datos de inicio \textit{PHY} (Que son datos de calibración de periféricos).\\
+
+Con la finalidad de adaptarse a la aplicación fue necesario modificar la tabla de particiones puesto que la interfaz gráfica de módo de configuración y las diferentes particiones para datos requerían de un tamaño mayor al que posee la tabla de particiones original. Para crear o modificar los tamaños en una partición basta con configurar en el \textit{menuconfig} del proyecto que se utilizará una tabla de particiones personalizada.
+
+\textbf{Explicación de particiones de memoria para configuración, operación y memoria rotativa}
+
+\textbf{Explicar el modo de configuración (Página WEB)}
+
+Al iniciar el programa se configuran los periféricos necesarios mediante las API que ofrece el fabricante \href{https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/index.html}{\textit{Espressif Systems}} para el ESP32.
+
+\subsection{Modo de operación}
+
+En este modo el primer periférico en configurarse en cualquiera de los nodos es la memoria no volátil (NVS), también llamada memoria flash, que se utiliza para almacenar información persistente entre reinicios del microcontrolador. El fabricante ofrece una interfaz de programación de aplicaciones (%Link a la API de NVS
+) que permite configurarla y operar fácilmente con esta.
+
+Esto se debe a que ahí se almacenan todos los datos que se transmiten al microcontrolador mientras este se encuentra en el modo de configuración. 
+
+Se toma desde la memoria flash la información sobre el tipo de nodo (serial RS485, entrada por pulsos o repetidor) y todos los parámetros que vienen asociados a este (tasa de baudios, ID serial, kWh iniciales, etc.), así como los parámetros necesarios para registrarse en la red mallada y poder comunicarse a través de la red.
+
+Luego se debe configurar el WiFi en cada uno de los medidores para poder unirse a la red mallada. Este periférico en el ESP32 posee también una interfaz de programación de aplicaciones para programarlo de manera más sencilla (%Link a la API del WiFi
+). Mediante esta interfaz, se calibra el WiFi, se asigna un lugar para almacenar sus parámetros de calibración y se coloca el modo de operación. El ESP32 posee tres modos de operación para este periférico: estación (STA), punto de acceso (AP) y un modo híbrido (AP/STA). Este último es el que se suele utilizar en la red mallada. Una vez configurado el WiFi se procede con la configuración e inicio de la red mallada.
+
+\subsubsection{La red mallada y el nodo central}
+
+La topología de red mallada utilizada en el proyecto está basada en la que provee \textit{Espressif} para ser utilizada en conjunto con el ESP32. Dicha topología es llamada ESP-MESH y el fabricante proporciona una interfaz de programación de aplicaciones (%API de ESP-MESH
+) para interactuar y modificar dicha topología con la intención de que sea adaptable a las soluciones que se deseen implementar.
+
+
+
+
+
+
+
+
+
+
+
+
+Según el tipo de medidor que haya sido configurado serán activadas unas tareas u otras, puesto que cada medidor debe realizar diferentes funciones para extraer y transmitir sus datos. 
+
+\subsubsection{Nodo Repetidor}
+
+\subsubsection{Nodo serial RS485}
+
+\subsubsection{Nodo de entrada por pulsos}
+
+\subsection{Modo de configuración}
