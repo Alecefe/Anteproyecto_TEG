@@ -31,8 +31,7 @@ IEC. (2007) 313-01-35. Disponible en http://www.electropedia.org/iev/iev.nsf/
 
 \bibitem{DianaL}
 D.~Londono, ``Desarrollo de una gu\'ia enfocada a medidores de energ\'ia y
-  conexiones de medidores,'' 2013, obtenido desde
-  https://core.ac.uk/download/pdf/71397220.pdf , en agosto 2020.
+  conexiones de medidores,'' 2013.
 
 \bibitem{RuizM}
 M.~Ruiz, ``Interoperabilidad entre medidores inteligentes de energ\'ia
@@ -58,5 +57,11 @@ A.~Vazquez, ``Dise\~no e implementaci\'on de una red wifi mallada que soporte
 M.~B. Rifki~Muhendra, Aditya~Rinaldi, ``Development of {WiFi} mesh
   infrastructure for internet of things applications,'' \emph{Engineering
   Physics International Conference, EPIC 2016}, p. 331, 2016.
+
+\bibitem{ESP-MESH}
+\BIBentryALTinterwordspacing
+E.~Systems. (2020) Esp-mesh. [Online]. Available:
+  \url{https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/mesh.html\#mesh-introduction}
+\BIBentrySTDinterwordspacing
 
 \end{thebibliography}

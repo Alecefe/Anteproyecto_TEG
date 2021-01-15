@@ -30,34 +30,40 @@
 \contentsline {subsection}{\numberline {2.3.2}Caracteristicas}{18}{subsection.2.3.2}%
 \contentsline {subsubsection}{Sobre los protocolos de enrutamiento en las redes Malladas}{19}{section*.14}%
 \contentsline {subsubsection}{Direccionamiento por MAC}{20}{section*.15}%
-\contentsline {section}{\numberline {2.4}Sistema operativo en tiempo real}{21}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}FreeRTOS}{21}{subsection.2.4.1}%
-\contentsline {section}{\numberline {2.5}Microcontrolador ESP32}{21}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Descripción}{21}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Caracteristicas}{22}{subsection.2.5.2}%
-\contentsline {subsubsection}{WiFi}{22}{section*.16}%
-\contentsline {subsubsection}{CPU y Memoria}{23}{section*.17}%
-\contentsline {subsubsection}{Relojes y temporizadores}{23}{section*.18}%
-\contentsline {subsubsection}{Periféricos}{23}{section*.19}%
-\contentsline {subsubsection}{Seguridad}{24}{section*.20}%
-\contentsline {chapter}{DEFINICIÓN Y DESCRIPCIÓN DEL HARDWARE}{27}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Definición y Descripción del Hardware}{27}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Definición}{27}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Descripción}{27}{subsection.3.1.2}%
-\contentsline {chapter}{DEFINICIÓN Y DESCRIPCIÓN DEL SOFTWARE}{28}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Definición del software}{28}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Descripción del software}{30}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Tablas de particiones en el ESP32}{30}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Modo de operación}{33}{subsection.4.2.2}%
-\contentsline {subsubsection}{La red mallada y el nodo central}{34}{section*.21}%
-\contentsline {subsubsection}{Nodo Repetidor}{34}{section*.22}%
-\contentsline {subsubsection}{Nodo serial RS485}{34}{section*.23}%
-\contentsline {subsubsection}{Nodo de entrada por pulsos}{34}{section*.24}%
-\contentsline {subsection}{\numberline {4.2.3}Modo de configuración}{34}{subsection.4.2.3}%
-\contentsline {chapter}{PRUEBAS Y RESULTADOS}{35}{chapter.5}%
-\contentsline {chapter}{CONCLUSIONES}{36}{chapter.6}%
-\contentsline {chapter}{RECOMENDACIONES}{37}{chapter.7}%
-\contentsline {chapter}{TÍTULO DEL ANEXO}{38}{appendix.Alph1}%
-\contentsline {chapter}{TÍTULO DEL ANEXO}{39}{appendix.Alph2}%
-\contentsline {chapter}{TÍTULO DEL ANEXO}{40}{appendix.Alph3}%
-\contentsline {chapter}{REFERENCIAS}{41}{appendix*.25}%
+\contentsline {section}{\numberline {2.4}La red mallada ESP-MESH}{21}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Definición}{21}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Terminología en la ESP-MESH}{22}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Topología de árbol sobre la red ESP-MESH}{23}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Tipos de nodos en la red ESP-MESH}{25}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.4.5}Señales de reconocimiento y límites de intensidad de señal (RSSI)}{26}{subsection.2.4.5}%
+\contentsline {section}{\numberline {2.5}Sistema operativo en tiempo real}{26}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}FreeRTOS}{27}{subsection.2.5.1}%
+\contentsline {section}{\numberline {2.6}Microcontrolador ESP32}{27}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Descripción}{27}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Caracteristicas}{28}{subsection.2.6.2}%
+\contentsline {subsubsection}{WiFi}{28}{section*.16}%
+\contentsline {subsubsection}{CPU y Memoria}{29}{section*.17}%
+\contentsline {subsubsection}{Relojes y temporizadores}{29}{section*.18}%
+\contentsline {subsubsection}{Periféricos}{29}{section*.19}%
+\contentsline {subsubsection}{Seguridad}{30}{section*.20}%
+\contentsline {chapter}{DEFINICIÓN Y DESCRIPCIÓN DEL HARDWARE}{33}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Definición y Descripción del Hardware}{33}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Definición}{33}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Descripción}{33}{subsection.3.1.2}%
+\contentsline {chapter}{DEFINICIÓN Y DESCRIPCIÓN DEL SOFTWARE}{34}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Definición del software}{34}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Descripción del software}{36}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Tablas de particiones en el ESP32}{36}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Modo de operación}{39}{subsection.4.2.2}%
+\contentsline {subsubsection}{La red mallada y el nodo central}{40}{section*.21}%
+\contentsline {subsubsection}{Nodo Repetidor}{40}{section*.22}%
+\contentsline {subsubsection}{Nodo serial RS485}{40}{section*.23}%
+\contentsline {subsubsection}{Nodo de entrada por pulsos}{40}{section*.24}%
+\contentsline {subsection}{\numberline {4.2.3}Modo de configuración}{40}{subsection.4.2.3}%
+\contentsline {chapter}{PRUEBAS Y RESULTADOS}{41}{chapter.5}%
+\contentsline {chapter}{CONCLUSIONES}{42}{chapter.6}%
+\contentsline {chapter}{RECOMENDACIONES}{43}{chapter.7}%
+\contentsline {chapter}{TÍTULO DEL ANEXO}{44}{appendix.Alph1}%
+\contentsline {chapter}{TÍTULO DEL ANEXO}{45}{appendix.Alph2}%
+\contentsline {chapter}{TÍTULO DEL ANEXO}{46}{appendix.Alph3}%
+\contentsline {chapter}{REFERENCIAS}{47}{appendix*.25}%

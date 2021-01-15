@@ -4,10 +4,14 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Infraestructura general de un sistema de medición avanzado}}{11}{figure.2.1}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Arquitectura de red en comunicaciones para medición inteligente. J. Ekanayake and K. Liyanage, SMART GRID TECHNOLOGY AND APPLICATIONS, First edit. New Delhi, 2013.}}{13}{figure.2.2}%
 \contentsline {figure}{\numberline {2.3}{\ignorespaces E. Hossain, Z. Han, and V. Poor, Smart Grid Communications and Networking. New York: CAMBRIDGE UNIVERSITY PRESS, 2012.}}{17}{figure.2.3}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Interacción del OS con otras capas del sistema informático.}}{21}{figure.2.4}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Ilustración de una red Wi-Fi tradicional. Tomada desde \cite {ESP-MESH}}}{21}{figure.2.4}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Ilustración de una red Wi-Fi ESP-MESH. Tomada desde \cite {ESP-MESH}}}{22}{figure.2.5}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Topología de árbol observada en la red ESP-MESH luego de su establecimiento. Tomada de \cite {ESP-MESH}}}{24}{figure.2.6}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Tipos de nodos en una red ESP-MESH. Tomada desde \cite {ESP-MESH}}}{25}{figure.2.7}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Interacción del OS con otras capas del sistema informático.}}{27}{figure.2.8}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrama ilustrativo de la memoria flash para los modelos de tablas de partición}}{31}{figure.4.1}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrama ilustrativo de la memoria flash para los modelos de tablas de partición}}{37}{figure.4.1}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

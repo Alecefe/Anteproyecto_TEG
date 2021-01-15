@@ -185,6 +185,79 @@ La red de Internet como la conocemos es el ejemplo más conocido y similar a una 
  \end{equation}
  
  La primera mitad de la dirección MAC contiene el número identificador del fabricante del adaptador (i.e. 00:A0:C9:14:C8:29). Dichos identificadores están regulados por un estándar de Internet. La segunda parte de la dirección MAC representa el número de serial asignado al adaptador por el fabricante. \cite{VazquezA}
+ 
+\section{La red mallada ESP-MESH}
+
+\subsection{Definición}
+
+Una red Wi-Fi de infraestructura tradicional es una red punto a multipunto donde un único nodo central conocido como punto de acceso (AP) está conectado directamente a todos los demás nodos conocidos como estaciones (STA). El AP es responsable de arbitrar y reenviar las transmisiones entre las estaciones. Algunos AP también retransmiten transmisiones hacia/desde una red IP externa a través de un enrutador. Las redes Wi-Fi de infraestructura tradicional sufren la desventaja de un área de cobertura limitada debido al requisito de que cada estación debe estar dentro del alcance para conectarse directamente con el AP. Además, las redes Wi-Fi tradicionales son susceptibles de sobrecarga ya que el número máximo de estaciones permitidas en la red está limitado por la capacidad del AP. \\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/TradicionalWifi}
+	\caption{Ilustración de una red Wi-Fi tradicional. Tomada desde \cite{ESP-MESH}}
+	\label{fig:tradicionalwifi}
+\end{figure}
+
+
+Proporcionada por espressif la red mallada ESP-MESH, se diferencia de las redes Wi-Fi de infraestructura tradicional en que no es necesario que los nodos se conecten a un nodo central. En cambio, los nodos pueden conectarse con nodos vecinos. Los nodos son mutuamente responsables de retransmitir las transmisiones de los demás. Esto permite que dicha red tenga un área de cobertura mucho mayor, ya que los nodos aún pueden lograr la interconectividad sin necesidad de estar dentro del alcance del nodo central. Asimismo, ESP-MESH también es menos susceptible a sobrecargas, ya que el número de nodos permitidos en la red ya no está limitado por un solo nodo central. \cite{ESP-MESH}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/ESPMESHWifi}
+	\caption{Ilustración de una red Wi-Fi ESP-MESH. Tomada desde \cite{ESP-MESH}}
+	\label{fig:espmeshwifi}
+\end{figure}
+
+\subsection{Terminología en la ESP-MESH}
+
+\begin{itemize}
+	\item \textbf{Nodo:} Cualquier dispositivo que es o que puede ser parte de una red ESP-MESH.
+	\item \textbf{Nodo raíz (root, root node):} Es el nodo cima de la red, este nodo se conecta a la puerta de enlace.
+	\item \textbf{Nodo hijo (child, child node):} Es un nodo X que establece conexión con un nodo Y. Dicho nodo Y se encuentra más cerca del nodo raíz que el nodo X.
+	\item \textbf{Nodo padre (padre, parent node):} Es un nodo Y que establece conexión con un nodo X, el nodo X se encuentra más lejos del nodo raíz que el nodo X.
+	\item \textbf{Nodo descendiente (descendant node):} Cualquier nodo accesible mediante la repetición del proceso padre a hijo.
+	\item \textbf{Nodos hermanos (sibling nodes):} Nodos que comparten el mismo nodo padre.
+	\item \textbf{Conexión:} Una asociación Wi-Fi tradicional entre un AP y una estación. Un nodo en ESP-MESH utilizará su interfaz de estación para asociarse con la interfaz softAP de otro nodo, formando así una conexión. El proceso de conexión incluye los procesos de autenticación y asociación en Wi-Fi.
+	\item \textbf{Salto inalámbrico (wireless hop):} La parte de la ruta entre el nodo de origen y de destino para un mensaje que corresponde a una única conexión inalámbrica. Un paquete de datos que atraviesa una sola conexión se conoce como salto único, mientras que atravesar varias conexiones se conoce como salto múltiple.
+	\item \textbf{Subred:} Subdivisión de una red ESP-MESH que consta de un nodo y todos sus nodos descendientes. Por lo tanto, la subred del nodo raíz consta de todos los nodos de una red ESP-MESH.
+	
+\end{itemize}
+
+\subsection{Topología de árbol sobre la red ESP-MESH}
+
+ESP-MESH está construido sobre la infraestructura del protocolo Wi-Fi y se puede considerar como un protocolo de red que combina muchas redes Wi-Fi individuales en una sola WLAN. En Wi-Fi, las estaciones se limitan a una sola conexión con un AP (conexión ascendente) en cualquier momento, mientras que un AP se puede conectar simultáneamente a varias estaciones (conexiones descendentes). Sin embargo, ESP-MESH permite que los nodos actúen simultáneamente como una estación y un AP. Por lo tanto, un nodo en ESP-MESH puede tener múltiples conexiones descendentes usando su interfaz softAP, mientras que simultáneamente tiene una única conexión ascendente usando su interfaz de estación. Esto, naturalmente, da como resultado una topología de red de árbol con una jerarquía de padres e hijos que consta de varias capas.\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/treetopology}
+	\caption{Topología de árbol observada en la red ESP-MESH luego de su establecimiento. Tomada de \cite{ESP-MESH}}
+	\label{fig:treetopology}
+\end{figure}
+
+
+ESP-MESH es una red de múltiples saltos (multi-hop), lo que significa que los nodos pueden transmitir paquetes a otros nodos en la red a través de uno o más saltos inalámbricos. Por lo tanto, los nodos en ESP-MESH no solo transmiten sus propios paquetes, sino que también sirven como retransmisores para otros nodos. Siempre que exista una ruta entre dos nodos cualesquiera en la capa física (a través de uno o más saltos inalámbricos), cualquier par de nodos dentro de una red ESP-MESH puede comunicarse.
+
+\subsection{Tipos de nodos en la red ESP-MESH}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/NodeTypes}
+	\caption{Tipos de nodos en una red ESP-MESH. Tomada desde \cite{ESP-MESH}}
+	\label{fig:nodetypes}
+\end{figure}
+
+\begin{itemize}
+	\item \textbf{Nodo raíz:} Es el nodo superior de la red y sirve como la única interfaz entre la red ESP-MESH y una red IP externa. El nodo raíz está conectado a un enrutador Wi-Fi convencional y transmite paquetes hacia / desde la red IP externa a los nodos dentro de la red ESP-MESH. Solo puede haber un nodo raíz dentro de una red ESP-MESH y la conexión ascendente del nodo raíz solo puede ser con el enrutador. Con referencia al diagrama anterior, el nodo A es el nodo raíz de la red.
+	\item \textbf{Nodo hoja:} Es un nodo al que no se le permite tener nodos secundarios (sin conexiones descendentes). Un nodo hoja solo puede transmitir o recibir sus propios paquetes, pero no puede reenviar los paquetes de otros nodos. Si un nodo está situado en la capa máxima permitida de la red, se asignará como nodo hoja. Esto evita que el nodo forme conexiones descendentes, lo que garantiza que la red no agregue una capa adicional. Algunos nodos sin una interfaz softAP (solo estación) también se asignarán como nodos hoja debido al requisito de una interfaz softAP para cualquier conexión descendente. Con referencia al diagrama anterior, los nodos L / M / N están situados en la capa máxima permitida de la red, por lo que se han asignado como nodos hoja.
+	\item \textbf{Nodos padres intermedios:} Los nodos conectados que no son ni el nodo raíz ni un nodo hoja son nodos padres intermedios. Un nodo intermedio debe tener una única conexión ascendente (un único nodo padre), pero puede tener de cero a varias conexiones descendentes (de cero a varios nodos hijos). Por lo tanto, un nodo padre intermedio puede transmitir y recibir paquetes, pero también reenviar paquetes recibidos desde sus conexiones ascendentes y descendentes. Haciendo referencia al diagrama anterior, los nodos B a J son nodos padres intermedios. Los nodos padres intermedios sin conexiones descendentes, como los nodos E / F / G / I / J, no son equivalentes a los nodos hoja, ya que todavía se les permite formar conexiones descendentes en el futuro.
+	\item \textbf{Nodos ociosos:} Los nodos que aún no se han unido a la red se asignan como nodos inactivos. Los nodos inactivos intentarán formar una conexión ascendente con un nodo padre intermedio o intentarán convertirse en el nodo raíz en las circunstancias correctas. Refiriéndose al diagrama anterior, los nodos K y O son nodos inactivos.
+\end{itemize}
+
+\subsection{Señales de reconocimiento y límites de intensidad de señal (RSSI)}
+
+\subsection{Tablas de enrutamiento}
+
 
 \section{Sistema operativo en tiempo real}
 
@@ -214,7 +287,8 @@ tecnología de ultra bajo consumo de 40 nm. Este microcontrolador esta diseñado p
 
 Además es una solución integrada, que ya posee WiFi, Bluetooth, junto con alrededor de 20 componentes externos. El chip incluye una interruptor de antena, acoplador de radio-frecuencia, amplificador de potencia, amplificador de recepción de bajo ruido, filtros, y módulos de administración de consumo.
 
-Este microcontrolador posee dos núcleos CPU que pueden ser individualmente controlados, con un reloj ajustable entre 80 MHz y 120 MHz. Además, usa el sistema operativo en tiempo real freeRTOS y tensión de alimentación nominal de 3,3 V.
+Este microcontrolador posee dos núcleos CPU que pueden ser individualmente controlados, con un reloj ajustable entre 80 MHz y 120 MHz. Además, usa el sistema operativo en tiempo real freeRTOS y tensión de alimentación nominal de 3,3 V.
+
 
 \subsection{Caracteristicas}
 
@@ -230,7 +304,8 @@ Este microcontrolador posee dos núcleos CPU que pueden ser individualmente contr
 	\item Monitorización de faro automático (Hardware TSF).
 	\item 4 interfaces virtuales WiFi.
 	\item Soporte simultaneo para estación, Punto de acceso y modo promiscuo.
-	\item Diversidad de antena.
+	\item Diversidad de antena.
+
 \end{itemize}
 
 \subsubsection{CPU y Memoria}
