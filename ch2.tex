@@ -256,10 +256,46 @@ ESP-MESH es una red de múltiples saltos (multi-hop), lo que significa que los no
 
 \subsection{Señales de reconocimiento y límites de intensidad de señal (RSSI)}
 
+Cada nodo en ESP-MESH que pueda formar conexiones descendentes (es decir, tiene una interfaz AP) enviará periódicamente tramas beacon Wi-Fi. Los nodos utilizan tramas beacon para permitir que otros nodos detecten su presencia y conozcan su estado. Los nodos inactivos escucharán las tramas beacon para generar una lista de nodos padres potenciales, desde dicha lista el nodo inactivo formará una conexión ascendente.
+
+La intensidad de la señal de una posible conexión ascendente está representada por el RSSI (Indicación de intensidad de la señal recibida) contenido en las tramas beacon del posible nodo padre. Para evitar que los nodos formen una conexión ascendente débil, ESP-MESH implementa un mecanismo de umbral RSSI para las tramas beacon. Si un nodo detecta una trama beacon con un RSSI por debajo del umbral preconfigurado, el nodo transmisor no se tendrá en cuenta para formar una conexión ascendente.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/rssithreshold}
+	\caption{Ejemplo ilustrativo sobre el umbral RSSI. Tomado de \cite{ESP-MESH}}
+	\label{fig:rssithreshold}
+\end{figure}
+
+En la imagen anterior \ref{fig:rssithreshold} el recuadro A ilustra la cantidad de nodos padres posibles que tiene cada nodo según el RSSI que recibe. En el recuadro B de dicha imagen se observa cómo un objeto que reduce el alcance de las transmisiones del nodo X afecta en la elección del padre, pues al tener el nodo Y un mayor RSSI en el nodo acaba siendo este el elegido para la conexión ascendente a pesar de encontrarse más lejos físicamente.\\
+
+
 \subsection{Tablas de enrutamiento}
 
+Cada nodo dentro de una red ESP-MESH mantendrá su tabla de enrutamiento individual utilizada para enrutar correctamente los paquetes ESP-MESH al nodo de destino correcto. La tabla de enrutamiento de un nodo en particular constará de las direcciones MAC de todos los nodos dentro de la subred del nodo en particular (incluida la dirección MAC del propio nodo en particular). Cada tabla de enrutamiento está dividida internamente en múltiples subtablas y cada subtabla corresponde a la subred de cada nodo hijo.\\
 
-\section{Sistema operativo en tiempo real}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/routingtables}
+	\caption{Ilustración de una red mallada, las tablas y subtablas de enrutamiento. Tomado de \cite{ESP-MESH}}
+	\label{fig:routingtables}
+\end{figure}
+
+
+Usando el diagrama anterior como ejemplo, la tabla de enrutamiento del nodo B consistiría en las direcciones MAC de los nodos B a I (es decir, equivalente a la subred del nodo B). La tabla de enrutamiento del nodo B está dividida internamente en dos subtablas que contienen los nodos C a F y los nodos G a I (es decir, equivalentes a las subredes de los nodos C y G respectivamente).\\
+
+
+La red utiliza las tablas de enrutamiento para determinar si un paquete debe reenviarse en sentido ascendente o descendente según las siguientes reglas:
+
+\begin{enumerate}
+	\item Si la dirección MAC de destino del paquete está dentro de la tabla de enrutamiento del nodo actual y no es el nodo actual, seleccione la subtabla que contiene la dirección MAC de destino y reenvíe el paquete de datos en sentido descendente al nodo secundario correspondiente a la subtabla.\\
+	
+	\item Si la dirección MAC de destino no se encuentra dentro de la tabla de enrutamiento del nodo actual, reenvíe el paquete de datos en sentido ascendente al nodo principal del nodo actual. Si lo hace repetidamente, el paquete llegará al nodo raíz, donde la tabla de enrutamiento debe contener todos los nodos dentro de la red.
+\end{enumerate}
+
+
+\section{Sistema operativo en tiempo real (RTOS)}
 
 Un sistema operativo es un conjunto de órdenes y programas de un sistema informático que gestiona los recursos de hardware y provee servicios que permiten el funcionamiento de otros programas.
 
@@ -278,6 +314,24 @@ La ventaja de utilizar sistemas operativos es que estos permiten gestionar los r
 %La mayoría de los sistemas operativos permiten que se ejecuten múltiples programas al mismo tiempo. Es es llamado multi-tarea. Aunque, en realidad, cada procesador solo puede correr una tarea. Una parte del sistema operativo es llamado planificador,y es responsable de la decisión cual programa correr y cuando, así da la ilusión de la ejecución simultanea de tareas mientras conmuta rápidamente entre cada programa [17]
 
 \subsection{FreeRTOS}
+
+FreeRTOS es una implementación de un sistema RTOS que está diseñado para ser lo suficientemente liviano para correr en un microcontrolador. Este posee interfaces de programación que proveen planificadores en tiempo real, comunicación entre tareas, temporizadores y sincronización. Lo que quiere decir que una descripción más exacta sería tratarlo como un kernel en tiempo real. El planificador usado en el FreeRTOS, logra determinismo, proporcionando a los usuarios la capacidad de asignar prioridad a cada tarea de ejecución. 
+
+\subsubsection{Tareas}
+Las tareas se implementan como funciones. Cada tarea es un pequeño programa en sí mismo. Tiene un punto de entrada, se ejecuta normalmente de forma continua en un bucle infinito y no se cierra. 
+
+\subsubsection{Colas}
+Las colas proporcionan mecanismo de comunicación de una a otra
+tarea, de una tarea a una interrupción y de una interrupción a una tarea. La comunicación se basa en la transferencia en un dato ubicado en la cola.
+
+
+\subsubsection{Semáforos}
+
+Los semáforos son muy similares a variables booleanas con la diferencia de que estos son utilizados para bloquear o desbloquear tareas, esperar a que ocurran eventos o cambios de un valor lógico y pueden ser activados desde una interrupción.
+
+\subsubsection{Grupos de eventos}
+
+Los grupos de eventos son espacios de memoria de hasta 23 bits en los que cada bit representa una variable booleana que puede utilizarse como una bandera para sincronizar tareas, bloquearlas o desbloquearlas. También puede ser llamada desde interrupciones.
 
 \section{Microcontrolador ESP32}	%Debe ir aqui o en la descripción del hardware?
 \subsection{Descripción}
@@ -408,4 +462,51 @@ Emu   & stuffed  & 33.33 \\
 Armadillo & frozen & 8.99 \\
 \bottomrule
 \end{tabular}
+\end{table}
+
+\begin{table}
+	\centering
+	\caption{Ejemplo}\label{Tab:producion}
+	\begin{tabular}{lrrr}
+		\toprule
+		Character & Success & Detected & Recognized \\
+		\midrule
+0 & 1.0 & 12 & 12 \\
+1 & 1.0 & 7 & 7 \\
+2 & 1.0 & 14 & 14 \\
+3 & 1.0 & 11 & 11 \\
+4 & 1.0 & 11 & 11 \\
+5 & 1.0 & 10 & 10 \\
+6 & 1.0 & 14 & 14 \\
+7 & 1.0 & 12 & 12 \\
+8 & 1.0 & 12 & 12 \\
+9 & 1.0 & 15 & 15 \\
+A & 1.0 & 49 & 49 \\
+B & 1.0 & 18 & 18 \\
+C & 1.0 & 6 & 6 \\
+D & 1.0 & 13 & 13 \\
+E & 0.857 & 7 & 6 \\
+F & 1.0 & 10 & 10 \\
+G & 1.0 & 12 & 12 \\
+H & 1.0 & 6 & 6 \\
+I & 1.0 & 4 & 4 \\
+J & 1.0 & 4 & 4 \\
+K & 0.8 & 5 & 4 \\
+L & 1.0 & 2 & 2 \\
+M & 0.933 & 15 & 14 \\
+N & 1.0 & 3 & 3 \\
+O & 1.0 & 1 & 1 \\
+P & 1.0 & 3 & 3 \\
+Q & 0 & 0 & 0 \\
+R & 1.0 & 1 & 1 \\
+S & 1.0 & 1 & 1 \\
+T & 1.0 & 1 & 1 \\
+U & 1.0 & 4 & 4 \\
+V & 1.0 & 3 & 3 \\
+W & 1.0 & 2 & 2 \\
+X & 1.0 & 4 & 4 \\
+Y & 1.0 & 2 & 2 \\
+Z & 0 & 0 & 0 \\
+		\bottomrule
+	\end{tabular}
 \end{table}
