@@ -12,14 +12,27 @@
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Ilustración de una red mallada, las tablas y subtablas de enrutamiento. Tomado de \cite {ESP-MESH}}}{28}{figure.2.9}%
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Interacción del OS con otras capas del sistema informático.}}{29}{figure.2.10}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama general de los componentes del Hardware.}}{36}{figure.3.1}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Microcontrolador ESP32 con su antena WiFi integrada.}}{37}{figure.3.2}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagrama de pines del encapsulado DIP8 para MAX3485.}}{38}{figure.3.3}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Configuración recomendada por el fabricante del chip.}}{39}{figure.3.4}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Configuración recomendada por Espressif para el manejo de un chip MAX-485.}}{39}{figure.3.5}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Circuito impreso con un condensador y el chip MAX3485 utilizada para la comunicación mediante el bus serial en los medidores necesarios.}}{40}{figure.3.6}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Topología seguidor de emisor utilizada en la salida optoacoplada del medidor de energía.}}{41}{figure.3.7}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Unidad controladora del sistema, tarjeta de desarrollo ESP32.}}{41}{figure.3.8}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrama de bloques genérico del sistema}}{40}{figure.4.1}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Diagrama general de funcionamiento ilustrado.}}{42}{figure.4.2}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Diagrama ilustrativo de la memoria flash para los modelos de tablas de partición. Columna 1: Aplicación de fábrica. Columna 2, 3, 4: Aplicaciones con arranques múltiples}}{44}{figure.4.3}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Diagrama de flujo de las tareas implementadas en el nodo central.}}{48}{figure.4.4}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Estructura de una trama Modbus TCP/IP.}}{51}{figure.4.5}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Diagrama de flujo de las tareas implementadas en el nodo RS485.}}{52}{figure.4.6}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Diagrama de flujo de las tareas implementadas en el nodo de pulsos.}}{55}{figure.4.7}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrama de bloques genérico del sistema}}{44}{figure.4.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Diagrama general de funcionamiento ilustrado.}}{46}{figure.4.2}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Diagrama ilustrativo de la memoria flash para los modelos de tablas de partición. Columna 1: Aplicación de fábrica. Columna 2, 3, 4: Aplicaciones con arranques múltiples}}{48}{figure.4.3}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Vista de la pantalla de inicio de sesión del usuario.}}{50}{figure.4.4}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Vista de la pantalla del formulario de parámetros de la red mallada.}}{51}{figure.4.5}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Vista de la pantalla de formulario de parámetros seriales.}}{52}{figure.4.6}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Vista de la pantalla de parámetros de red local}}{53}{figure.4.7}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Vista de la pantalla para modificar los parámetros de acceso del usuario.}}{53}{figure.4.8}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Diagrama de flujo de las tareas implementadas en el nodo central.}}{56}{figure.4.9}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Estructura de una trama Modbus TCP/IP.}}{59}{figure.4.10}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Diagrama de flujo de las tareas implementadas en el nodo RS485.}}{60}{figure.4.11}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Diagrama de flujo de las tareas implementadas en el nodo de pulsos.}}{63}{figure.4.12}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
