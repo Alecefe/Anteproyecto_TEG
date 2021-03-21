@@ -110,19 +110,13 @@ El servidor \textit{HTTP} está implementado por el fabricante en los ejemplos de
 
 \subsubsection{Interfaz Gráfica de usuario}
 
-La interfaz gráfica consta de 6 pantallas, cada una con un formulario que son parámetros necesarios para conectarse a la red mallada, para su funcionamiento como algún tipo de nodo o para la conexión con el enrutador. A la interfaz se accede mediante la dirección IP del nodo o mediante un DNS relacionado con la MAC. También se incluye la configuración de usuario y clave para proteger al acceso, de usuarios no deseados. Las pantallas por las que puede ingresar datos el usuario son:
+La interfaz gráfica consta de 5 pantallas, cada una con un formulario que son parámetros necesarios para conectarse a la red mallada, para su funcionamiento como algún tipo de nodo o para la conexión con el enrutador. A la interfaz se accede mediante la dirección IP del nodo o mediante un DNS relacionado con la MAC. También se incluye la configuración de usuario y clave para proteger al acceso, de usuarios no deseados. Las pantallas por las que puede ingresar datos el usuario son:
 
-\begin{itemize}
-	\item \textbf{Inicio de sesión}\\
+\begin{enumerate}
+	\item \textbf{Inicio de sesión}
 	
-	El inicio de sesión requiere al menos de un usuario y contraseña para autenticar el acceso a la configuración del sistema. Esta pantalla debe ofrecer el acceso al sistema de configuración si estos son introducidos correctamente y rechazarlos en caso de que no.
+	El inicio de sesión requiere al menos de un usuario y contraseña para autenticar el acceso a la configuración del sistema. Esta pantalla debe ofrecer el acceso al sistema de configuración si estos son introducidos correctamente y rechazarlos en caso de que no.\\
 	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.9\linewidth]{img/Login}
-		\caption{Vista de la pantalla de inicio de sesión del usuario.}
-		\label{fig:login}
-	\end{figure}
 	
 	\item \textbf{Parámetros de red mallada}
 	
@@ -132,16 +126,11 @@ La interfaz gráfica consta de 6 pantallas, cada una con un formulario que son pa
 		\item Contraseña de la red: Es la clave requerida por los nodos para ingresar a la red. Sin este parámetro y el anterior no serán admitidos en la red mallada.
 		\item Cantidad máxima de capas: Se refiere a la cantidad de capas aceptadas por la red, este parámetro es necesario para la configuración de la misma. El valor varía entre 1 y 25 pero el fabricante recomienda 10 para tiempos de retardos manejables.
 		\item Cantidad máxima de estaciones conectadas: Este parámetro es el número máximo de estaciones WiFi conectadas que tendrá el nodo, en términos de la red mallada es la cantidad máxima de nodos hijo que puede tener un nodo. Se aceptan valores entre 1 y 10 pero recomienda que sea menor que 6 para un buen funcionamiento del punto de acceso.
-		\item Puerto del socket: El número de puerto TCP/IP que será abierto por el microcontrolador para conexiones externas, esto será explicado en detalle en la rutina correspondiente a este proceso.
+		\item Puerto del socket: El número de puerto TCP/IP que será abierto por el microcontrolador para conexiones externas, esto será explicado en detalle en la rutina correspondiente a este proceso.\\
+		
 	\end{itemize}
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.9\linewidth]{img/FormMesh}
-		\caption{Vista de la pantalla del formulario de parámetros de la red mallada.}
-		\label{fig:formmesh}
-	\end{figure}
-	
-	
+
+
 	\item \textbf{Parámetros seriales}
 	
 	La pantalla de ingreso de los parámetros para el funcionamiento serial debe depender del tipo de nodo que se busque configurar puesto que hay al menos 3 tipos de nodos en la red sin contar el nodo central. En general para cualquier tipo de nodo los parámetros necesarios son:
@@ -150,41 +139,20 @@ La interfaz gráfica consta de 6 pantallas, cada una con un formulario que son pa
 		\item Tasa de baudios: La tasa de comunicación con el medidor ó el bus serial.
 		\item Factor de conversión [$\frac{imp}{kWh}$]: La cantidad de impusos por cada kWh de energía registrada por el medidor al que se conecte el nodo.
 		\item Condición inicial de energía: Al soportar medidores ya instalado se deben tomar en cuenta las condiciones iniciales de energía consumida que marca el medidor para que el sistema sea coherente con el equipo.
-		\item Identificador de esclavo: Necesario para identificar el tipo de nodo que emulará un bus serial.
+		\item Identificador de esclavo: Necesario para identificar el tipo de nodo que emulará un bus serial.\\
+		
 	\end{itemize}
-	
-	
-	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.9\linewidth]{img/FormModbus}
-		\caption{Vista de la pantalla de formulario de parámetros seriales.}
-		\label{fig:formmodbus}
-	\end{figure}
 	
 	\item \textbf{Configuración de red local}
 	
-	Esta vista debe contemplar el ingreso de los parámetros de SSID y contraseña de la red local.
+	Esta vista debe contemplar el ingreso de los parámetros de SSID y contraseña de la red local.\\
 	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.9\linewidth]{img/LocWifijpg}
-		\caption{Vista de la pantalla de parámetros de red local}
-		\label{fig:locwifijpg}
-	\end{figure}
-
+	
 	\item \textbf{Configuración de inicio de sesión}
 	
-	Esta vista responde a la necesidad de cambiar el nombre y la contraseña por defecto para el acceso al sistema de configuración mediante la interfaz web gráfica.
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.9\linewidth]{img/UserLog}
-		\caption{Vista de la pantalla para modificar los parámetros de acceso del usuario.}
-		\label{fig:userlog}
-	\end{figure}
+	Esta vista responde a la necesidad de cambiar el nombre y la contraseña por defecto para el acceso al sistema de configuración mediante la interfaz web gráfica.\\
 	
-	
-\end{itemize}
+\end{enumerate}
 
 \subsection{Modo de operación}
 

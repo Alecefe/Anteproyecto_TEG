@@ -5,8 +5,14 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {4.1}{\ignorespaces ESP-IDF Tabla de Particiones por defecto (Aplicación única de fábrica, sin OTA)}}{48}{table.4.1}%
 \contentsline {table}{\numberline {4.2}{\ignorespaces Tabla de particiones personalizada para la aplicación}}{49}{table.4.2}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Tabla de particiones de la aplicación}}{64}{table.4.3}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Tabla de particiones de la aplicación}}{62}{table.4.3}%
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Registro de mensajes del maestro sobre la comunicación con el esclavo de pulsos.}}{70}{table.5.1}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Registro de mensajes del nodo contador de pulsos sobre la comunicación con el maestro.}}{70}{table.5.2}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Registro de mensajes del maestro sobre la comunicación con el nodo serial rs485.}}{70}{table.5.3}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Registro de mensajes del nodo serial rs485 sobre la comunicación con el maestro.}}{71}{table.5.4}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Tiempo de recuperación de la red cuando es desconectado el nodo central.}}{71}{table.5.5}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces Tiempo de recuperación de la red cuando es desconectado un nodo, exceptuando el nodo central.}}{72}{table.5.6}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -24,16 +24,16 @@
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrama de bloques genérico del sistema}}{44}{figure.4.1}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Diagrama general de funcionamiento ilustrado.}}{46}{figure.4.2}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Diagrama ilustrativo de la memoria flash para los modelos de tablas de partición. Columna 1: Aplicación de fábrica. Columna 2, 3, 4: Aplicaciones con arranques múltiples}}{48}{figure.4.3}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Vista de la pantalla de inicio de sesión del usuario.}}{50}{figure.4.4}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Vista de la pantalla del formulario de parámetros de la red mallada.}}{51}{figure.4.5}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Vista de la pantalla de formulario de parámetros seriales.}}{52}{figure.4.6}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Vista de la pantalla de parámetros de red local}}{53}{figure.4.7}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Vista de la pantalla para modificar los parámetros de acceso del usuario.}}{53}{figure.4.8}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Diagrama de flujo de las tareas implementadas en el nodo central.}}{56}{figure.4.9}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Estructura de una trama Modbus TCP/IP.}}{59}{figure.4.10}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Diagrama de flujo de las tareas implementadas en el nodo RS485.}}{60}{figure.4.11}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Diagrama de flujo de las tareas implementadas en el nodo de pulsos.}}{63}{figure.4.12}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Diagrama de flujo de las tareas implementadas en el nodo central.}}{54}{figure.4.4}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Estructura de una trama Modbus TCP/IP.}}{57}{figure.4.5}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Diagrama de flujo de las tareas implementadas en el nodo RS485.}}{58}{figure.4.6}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Diagrama de flujo de las tareas implementadas en el nodo de pulsos.}}{61}{figure.4.7}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Vista de la pantalla de inicio de sesión del usuario.}}{67}{figure.5.1}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Vista de la pantalla del formulario de parámetros de la red mallada.}}{68}{figure.5.2}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Vista de la pantalla de formulario de parámetros seriales.}}{68}{figure.5.3}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Vista de la pantalla de parámetros de red local}}{69}{figure.5.4}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Vista de la pantalla para modificar los parámetros de acceso del usuario.}}{69}{figure.5.5}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
