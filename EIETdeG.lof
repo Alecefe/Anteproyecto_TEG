@@ -1,25 +1,32 @@
 \babel@toc {spanish}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Infraestructura general de un sistema de medición avanzado}}{11}{figure.2.1}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Arquitectura de red en comunicaciones para medición inteligente. J. Ekanayake and K. Liyanage, SMART GRID TECHNOLOGY AND APPLICATIONS, First edit. New Delhi, 2013.}}{13}{figure.2.2}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces E. Hossain, Z. Han, and V. Poor, Smart Grid Communications and Networking. New York: CAMBRIDGE UNIVERSITY PRESS, 2012.}}{17}{figure.2.3}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Ilustración de una red Wi-Fi tradicional. Tomada desde \cite {ESP-MESH}}}{21}{figure.2.4}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Ilustración de una red Wi-Fi ESP-MESH. Tomada desde \cite {ESP-MESH}}}{22}{figure.2.5}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Topología de árbol observada en la red ESP-MESH luego de su establecimiento. Tomada de \cite {ESP-MESH}}}{24}{figure.2.6}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Tipos de nodos en una red ESP-MESH. Tomada desde \cite {ESP-MESH}}}{25}{figure.2.7}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Ejemplo ilustrativo sobre el umbral RSSI. Tomado de \cite {ESP-MESH}}}{27}{figure.2.8}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Ilustración de una red mallada, las tablas y subtablas de enrutamiento. Tomado de \cite {ESP-MESH}}}{28}{figure.2.9}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Interacción del OS con otras capas del sistema informático.}}{29}{figure.2.10}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Infraestructura general de un sistema de medición avanzado}}{10}{figure.2.1}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Arquitectura de red en comunicaciones para medición inteligente. J. Ekanayake and K. Liyanage, SMART GRID TECHNOLOGY AND APPLICATIONS, First edit. New Delhi, 2013.}}{12}{figure.2.2}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces E. Hossain, Z. Han, and V. Poor, Smart Grid Communications and Networking. New York: CAMBRIDGE UNIVERSITY PRESS, 2012.}}{16}{figure.2.3}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Ilustración de una red Wi-Fi tradicional. Tomada desde \cite {ESP-MESH}}}{19}{figure.2.4}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Ilustración de una red Wi-Fi ESP-MESH. Tomada desde \cite {ESP-MESH}}}{20}{figure.2.5}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Topología de árbol observada en la red ESP-MESH luego de su establecimiento. Tomada de \cite {ESP-MESH}}}{22}{figure.2.6}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Tipos de nodos en una red ESP-MESH. Tomada desde \cite {ESP-MESH}}}{23}{figure.2.7}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Ejemplo ilustrativo sobre el umbral RSSI. Tomado de \cite {ESP-MESH}}}{25}{figure.2.8}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Ilustración de una red mallada, las tablas y subtablas de enrutamiento. Tomado de \cite {ESP-MESH}}}{26}{figure.2.9}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Interacción del OS con otras capas del sistema informático.}}{27}{figure.2.10}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama general de los componentes del Hardware.}}{36}{figure.3.1}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Microcontrolador ESP32 con su antena WiFi integrada.}}{37}{figure.3.2}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagrama de pines del encapsulado DIP8 para MAX3485.}}{38}{figure.3.3}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Configuración recomendada por el fabricante del chip.}}{39}{figure.3.4}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Configuración recomendada por Espressif para el manejo de un chip MAX-485.}}{39}{figure.3.5}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Circuito impreso con un condensador y el chip MAX3485 utilizada para la comunicación mediante el bus serial en los medidores necesarios.}}{40}{figure.3.6}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Topología seguidor de emisor utilizada en la salida optoacoplada del medidor de energía.}}{41}{figure.3.7}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Unidad controladora del sistema, tarjeta de desarrollo ESP32.}}{41}{figure.3.8}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama general de los componentes del Hardware.}}{33}{figure.3.1}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Microcontrolador ESP32 con su antena WiFi integrada.}}{34}{figure.3.2}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagrama de pines del encapsulado DIP8 para MAX3485.}}{35}{figure.3.3}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Configuración recomendada por el fabricante del chip.}}{36}{figure.3.4}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Configuración recomendada por Espressif para el manejo de un chip MAX-485.}}{36}{figure.3.5}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Circuito impreso con un condensador y el chip MAX3485 utilizada para la comunicación mediante el bus serial en los medidores necesarios.}}{37}{figure.3.6}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Topología utilizada en la salida opto acoplada del medidor de energía.}}{38}{figure.3.7}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Unidad controladora del sistema, tarjeta de desarrollo ESP32.}}{38}{figure.3.8}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Esquemático del módulo de alimentación.}}{39}{figure.3.9}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Esquemáticos de interfaces con los medidores.}}{39}{figure.3.10}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Esquemático de la unidad controladora implementada con el ESP32.}}{40}{figure.3.11}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Imagen del diseño frontal de la PCB utilizando KiCad.}}{40}{figure.3.12}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Imagen del diseño posterior de la PCB utilizando KiCad.}}{41}{figure.3.13}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Imagen de la capa frontal de la PCB renderizada.}}{41}{figure.3.14}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Imagen de la capa posterior de la PCB renderizada.}}{42}{figure.3.15}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrama de bloques genérico del sistema}}{44}{figure.4.1}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Diagrama general de funcionamiento ilustrado.}}{46}{figure.4.2}%
@@ -27,14 +34,22 @@
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Diagrama de flujo de las tareas implementadas en el nodo central.}}{54}{figure.4.4}%
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Estructura de una trama Modbus TCP/IP.}}{57}{figure.4.5}%
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Diagrama de flujo de las tareas implementadas en el nodo RS485.}}{58}{figure.4.6}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Diagrama de flujo de las tareas implementadas en el nodo de pulsos.}}{61}{figure.4.7}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Diagrama de flujo de las tareas implementadas en el nodo de pulsos.}}{60}{figure.4.7}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Vista de la pantalla de inicio de sesión del usuario.}}{67}{figure.5.1}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Vista de la pantalla del formulario de parámetros de la red mallada.}}{68}{figure.5.2}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Vista de la pantalla de formulario de parámetros seriales.}}{68}{figure.5.3}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Vista de la pantalla de parámetros de red local}}{69}{figure.5.4}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Vista de la pantalla para modificar los parámetros de acceso del usuario.}}{69}{figure.5.5}%
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Log serial del microcontrolador en modo servidor HTTP cuando es enviada una de las pantallas.}}{67}{figure.5.1}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Vista de la pantalla de inicio de sesión del usuario.}}{68}{figure.5.2}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Mensaje recibido en el servidor cuando el usuario rellena el inicio de sesión y envía los datos.}}{68}{figure.5.3}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Vista de la pantalla del formulario de parámetros de la red mallada.}}{69}{figure.5.4}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Mensaje recibido en el servidor cuando el usuario rellena el formulario de red mallada y envía los datos.}}{69}{figure.5.5}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Vista de la pantalla de formulario de parámetros seriales.}}{70}{figure.5.6}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Mensaje recibido en el servidor cuando el usuario rellena el formulario de parámetros seriales y envía los datos.}}{70}{figure.5.7}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Vista de la pantalla de parámetros de red local}}{71}{figure.5.8}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Mensaje recibido en el servidor cuando el usuario rellena el formulario de red local y envía los datos.}}{71}{figure.5.9}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Vista de la pantalla para modificar los parámetros de acceso del usuario.}}{72}{figure.5.10}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Mensaje recibido en el servidor cuando el usuario rellena el formulario de actualizar usuario y contraseña y envía los datos.}}{72}{figure.5.11}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Diagrama general de la red para pruebas.}}{73}{figure.5.12}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Ejemplo de la red restablecida luego de desconectar el nodo central si el nodo repetidor gana la votación.}}{75}{figure.5.13}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Ejemplo de la red restablecida luego de desconectar el nodo repetidor.}}{76}{figure.5.14}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

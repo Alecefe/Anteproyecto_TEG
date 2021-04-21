@@ -2,61 +2,62 @@
 \contentsline {chapter}{RECONOCIMIENTOS Y AGRADECIMIENTOS}{\es@scroman {iii}}{chapter*.1}%
 \contentsline {chapter}{ÍNDICE GENERAL}{\es@scroman {viii}}{chapter*.2}%
 \contentsline {chapter}{LISTA DE FIGURAS}{\es@scroman {xii}}{chapter*.3}%
-\contentsline {chapter}{LISTA DE TABLAS}{\es@scroman {xiv}}{chapter*.4}%
-\contentsline {chapter}{LISTA DE ACRÓNIMOS}{\es@scroman {xv}}{chapter*.5}%
+\contentsline {chapter}{LISTA DE TABLAS}{\es@scroman {xv}}{chapter*.4}%
+\contentsline {chapter}{LISTA DE ACRÓNIMOS}{\es@scroman {xvi}}{chapter*.5}%
 \contentsline {chapter}{INTRODUCCIÓN}{1}{chapter*.6}%
 \contentsline {chapter}{CONCEPTUALIZACIÓN DEL PROYECTO}{3}{chapter.1}%
 \contentsline {section}{\numberline {1.1}PLANTEAMIENTO DEL PROBLEMA}{3}{section.1.1}%
 \contentsline {section}{\numberline {1.2}JUSTIFICACIÓN}{4}{section.1.2}%
 \contentsline {section}{\numberline {1.3}OBJETIVO GENERAL}{5}{section.1.3}%
 \contentsline {section}{\numberline {1.4}OBJETIVOS ESPECÍFICOS}{5}{section.1.4}%
-\contentsline {chapter}{MARCO REFERENCIAL}{7}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Fundamentos de medición consumo de energía eléctrica}{7}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Definición}{7}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Clasificación de los medidores}{8}{subsection.2.1.2}%
-\contentsline {subsubsection}{\numberline {2.1.2.1}Según el principio de funcionamiento}{8}{subsubsection.2.1.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.2.2}Según su construcción:}{9}{subsubsection.2.1.2.2}%
-\contentsline {subsection}{\numberline {2.1.3}Infraestructuras de medición de energía}{10}{subsection.2.1.3}%
-\contentsline {subsubsection}{\numberline {2.1.3.1}Red de área local (Home Area Network)}{12}{subsubsection.2.1.3.1}%
-\contentsline {subsubsection}{\numberline {2.1.3.2}Red de vecindad (Neighbourhood Area Network)}{12}{subsubsection.2.1.3.2}%
-\contentsline {subsubsection}{\numberline {2.1.3.3}Red de área amplia (Wide Area Network)}{12}{subsubsection.2.1.3.3}%
-\contentsline {subsection}{\numberline {2.1.4}Normativa aplicada a las redes de medición}{13}{subsection.2.1.4}%
-\contentsline {subsubsection}{\numberline {2.1.4.1}Modelo OSI}{14}{subsubsection.2.1.4.1}%
-\contentsline {subsubsection}{\numberline {2.1.4.2}GWAC}{16}{subsubsection.2.1.4.2}%
-\contentsline {section}{\numberline {2.2}Redes malladas}{17}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Definición}{17}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Caracteristicas}{18}{subsection.2.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.2.1}Sobre los protocolos de enrutamiento en las redes Malladas}{19}{subsubsection.2.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2.2}Direccionamiento por MAC}{20}{subsubsection.2.2.2.2}%
-\contentsline {section}{\numberline {2.3}La red mallada ESP-MESH}{20}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Definición}{20}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Terminología en la ESP-MESH}{22}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Topología de árbol sobre la red ESP-MESH}{23}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Tipos de nodos en la red ESP-MESH}{25}{subsection.2.3.4}%
-\contentsline {subsection}{\numberline {2.3.5}Señales de reconocimiento y límites de intensidad de señal (RSSI)}{26}{subsection.2.3.5}%
-\contentsline {subsection}{\numberline {2.3.6}Tablas de enrutamiento}{28}{subsection.2.3.6}%
-\contentsline {section}{\numberline {2.4}Sistema operativo en tiempo real (RTOS)}{29}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}FreeRTOS}{30}{subsection.2.4.1}%
-\contentsline {subsubsection}{\numberline {2.4.1.1}Tareas}{30}{subsubsection.2.4.1.1}%
-\contentsline {subsubsection}{\numberline {2.4.1.2}Colas}{30}{subsubsection.2.4.1.2}%
-\contentsline {subsubsection}{\numberline {2.4.1.3}Semáforos}{31}{subsubsection.2.4.1.3}%
-\contentsline {subsubsection}{\numberline {2.4.1.4}Grupos de eventos}{31}{subsubsection.2.4.1.4}%
-\contentsline {section}{\numberline {2.5}Microcontrolador ESP32}{31}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Descripción}{31}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Caracteristicas}{32}{subsection.2.5.2}%
-\contentsline {subsubsection}{\numberline {2.5.2.1}WiFi}{32}{subsubsection.2.5.2.1}%
-\contentsline {subsubsection}{\numberline {2.5.2.2}CPU y Memoria}{32}{subsubsection.2.5.2.2}%
-\contentsline {subsubsection}{\numberline {2.5.2.3}Relojes y temporizadores}{33}{subsubsection.2.5.2.3}%
-\contentsline {subsubsection}{\numberline {2.5.2.4}Periféricos}{33}{subsubsection.2.5.2.4}%
-\contentsline {subsubsection}{\numberline {2.5.2.5}Seguridad}{34}{subsubsection.2.5.2.5}%
-\contentsline {chapter}{DEFINICIÓN Y DESCRIPCIÓN DEL HARDWARE}{36}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Definición del hardware}{36}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Descripción del hardware}{37}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Interfaz de comunicación inalámbrica}{37}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Interfaz serial con el medidor}{38}{subsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.2.1}Bus serial}{38}{subsubsection.3.2.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2.2}Salida de calibración}{40}{subsubsection.3.2.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Unidad controladora}{41}{subsection.3.2.3}%
+\contentsline {chapter}{MARCO REFERENCIAL}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Fundamentos de medición consumo de energía eléctrica}{6}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Definición}{6}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Clasificación de los medidores}{7}{subsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.2.1}Según el principio de funcionamiento}{7}{subsubsection.2.1.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.2.2}Según su construcción:}{8}{subsubsection.2.1.2.2}%
+\contentsline {subsection}{\numberline {2.1.3}Infraestructuras de medición de energía}{9}{subsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.3.1}Red de área local (Home Area Network)}{10}{subsubsection.2.1.3.1}%
+\contentsline {subsubsection}{\numberline {2.1.3.2}Red de vecindad (Neighbourhood Area Network)}{11}{subsubsection.2.1.3.2}%
+\contentsline {subsubsection}{\numberline {2.1.3.3}Red de área amplia (Wide Area Network)}{11}{subsubsection.2.1.3.3}%
+\contentsline {subsection}{\numberline {2.1.4}Normativa aplicada a las redes de medición}{12}{subsection.2.1.4}%
+\contentsline {subsubsection}{\numberline {2.1.4.1}Modelo OSI}{13}{subsubsection.2.1.4.1}%
+\contentsline {subsubsection}{\numberline {2.1.4.2}GWAC}{15}{subsubsection.2.1.4.2}%
+\contentsline {section}{\numberline {2.2}Redes malladas}{15}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Definición}{15}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Caracteristicas}{17}{subsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.2.1}Sobre los protocolos de enrutamiento en las redes Malladas}{17}{subsubsection.2.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2.2}Direccionamiento por MAC}{18}{subsubsection.2.2.2.2}%
+\contentsline {section}{\numberline {2.3}La red mallada ESP-MESH}{19}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Definición}{19}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Terminología en la ESP-MESH}{20}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Topología de árbol sobre la red ESP-MESH}{21}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Tipos de nodos en la red ESP-MESH}{23}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Señales de reconocimiento y límites de intensidad de señal (RSSI)}{24}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.6}Tablas de enrutamiento}{25}{subsection.2.3.6}%
+\contentsline {section}{\numberline {2.4}Sistema operativo en tiempo real (RTOS)}{27}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}FreeRTOS}{28}{subsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.1.1}Tareas}{28}{subsubsection.2.4.1.1}%
+\contentsline {subsubsection}{\numberline {2.4.1.2}Colas}{28}{subsubsection.2.4.1.2}%
+\contentsline {subsubsection}{\numberline {2.4.1.3}Semáforos}{28}{subsubsection.2.4.1.3}%
+\contentsline {subsubsection}{\numberline {2.4.1.4}Grupos de eventos}{29}{subsubsection.2.4.1.4}%
+\contentsline {section}{\numberline {2.5}Microcontrolador ESP32}{29}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Descripción}{29}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Caracteristicas}{30}{subsection.2.5.2}%
+\contentsline {subsubsection}{\numberline {2.5.2.1}WiFi}{30}{subsubsection.2.5.2.1}%
+\contentsline {subsubsection}{\numberline {2.5.2.2}CPU y Memoria}{30}{subsubsection.2.5.2.2}%
+\contentsline {subsubsection}{\numberline {2.5.2.3}Relojes y temporizadores}{31}{subsubsection.2.5.2.3}%
+\contentsline {subsubsection}{\numberline {2.5.2.4}Periféricos}{31}{subsubsection.2.5.2.4}%
+\contentsline {subsubsection}{\numberline {2.5.2.5}Seguridad}{32}{subsubsection.2.5.2.5}%
+\contentsline {chapter}{DEFINICIÓN Y DESCRIPCIÓN DEL HARDWARE}{33}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Definición del hardware}{33}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Descripción del hardware}{34}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Interfaz de comunicación inalámbrica}{34}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Interfaz serial con el medidor}{35}{subsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}Bus serial}{35}{subsubsection.3.2.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2.2}Salida de calibración}{37}{subsubsection.3.2.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Unidad controladora}{38}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Circuito impreso}{39}{subsection.3.2.4}%
 \contentsline {chapter}{DEFINICIÓN Y DESCRIPCIÓN DEL SOFTWARE}{43}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Definición del software}{43}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Descripción del software}{46}{section.4.2}%
@@ -65,21 +66,20 @@
 \contentsline {subsubsection}{\numberline {4.2.1.2}Interfaz Gráfica de usuario}{49}{subsubsection.4.2.1.2}%
 \contentsline {subsection}{\numberline {4.2.2}Modo de operación}{52}{subsection.4.2.2}%
 \contentsline {subsubsection}{\numberline {4.2.2.1}La red mallada y el nodo central}{53}{subsubsection.4.2.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2.2}Nodo serial RS485}{58}{subsubsection.4.2.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}Nodo serial RS485}{57}{subsubsection.4.2.2.2}%
 \contentsline {subsubsection}{\numberline {4.2.2.3}Nodo de entrada por pulsos}{59}{subsubsection.4.2.2.3}%
-\contentsline {subsubsection}{\numberline {4.2.2.4}Nodo Repetidor}{66}{subsubsection.4.2.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.2.4}Nodo Repetidor}{65}{subsubsection.4.2.2.4}%
 \contentsline {subsubsection}{\numberline {4.2.2.5}Otras consideraciones}{66}{subsubsection.4.2.2.5}%
 \contentsline {chapter}{PRUEBAS Y RESULTADOS}{67}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Resultados de la interfaz gráfica}{67}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Prueba de funcionamiento del sistema}{70}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Extracción de datos del nodo contador de pulsos}{70}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Extracción de datos del nodo RS485}{70}{subsection.5.2.2}%
-\contentsline {section}{\numberline {5.3}Prueba de reestablecimiento del sistema}{71}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Para el nodo central}{71}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Para cualquier otro nodo}{72}{subsection.5.3.2}%
-\contentsline {chapter}{CONCLUSIONES}{73}{chapter.6}%
-\contentsline {chapter}{RECOMENDACIONES}{74}{chapter.7}%
-\contentsline {chapter}{TÍTULO DEL ANEXO}{75}{appendix.Alph1}%
-\contentsline {chapter}{TÍTULO DEL ANEXO}{76}{appendix.Alph2}%
-\contentsline {chapter}{TÍTULO DEL ANEXO}{77}{appendix.Alph3}%
-\contentsline {chapter}{REFERENCIAS}{78}{appendix*.7}%
+\contentsline {section}{\numberline {5.2}Prueba de funcionamiento del sistema}{72}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Extracción de datos del nodo contador de pulsos}{74}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Extracción de datos del nodo RS485}{74}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Prueba de restablecimiento del sistema}{75}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Para el nodo central}{75}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Para cualquier otro nodo}{76}{subsection.5.3.2}%
+\contentsline {chapter}{CONCLUSIONES}{77}{chapter.6}%
+\contentsline {chapter}{RECOMENDACIONES}{78}{chapter.7}%
+\contentsline {chapter}{Código fuente}{79}{appendix.Alph1}%
+\contentsline {chapter}{Datasheet MAX3485}{100}{appendix.Alph2}%
+\contentsline {chapter}{REFERENCIAS}{109}{appendix*.7}%

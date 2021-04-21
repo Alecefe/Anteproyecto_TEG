@@ -11,6 +11,8 @@
 \usepackage[utf8]{inputenc} %Reconoce tildes y otros simbolos propios del espa?ol
 \usepackage[T1]{fontenc}  %Estilo de fuente time new roman
 
+\usepackage{pdfpages}
+
 \usepackage{amssymb}
 \usepackage{amsfonts}
 \usepackage{amsmath}
@@ -55,6 +57,63 @@
 \usepackage[colorlinks=true,urlcolor=black,citecolor=black,anchorcolor=black,linkcolor=black]{hyperref}
 
 \UseRawInputEncoding
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%            Definición de las entradas de código en C           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{times}
+
+\usepackage{color}
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.75}
+\definecolor{gray45}{gray}{.45}
+\definecolor{keywords}{rgb}{0.00,0.00,1.00}
+\definecolor{include}{rgb}{0.00,0.67,0.00}
+
+\usepackage{listings}
+\lstset{ frame=Ltb,
+	framerule=0pt,
+	aboveskip=0.5cm,
+	framextopmargin=3pt,
+	framexbottommargin=3pt,
+	framexleftmargin=0.2cm,
+	tabsize=2,
+	framesep=0pt,
+	rulesep=.4pt,
+	backgroundcolor=\color{gray97},
+	rulesepcolor=\color{black},
+	%
+	stringstyle=\ttfamily,
+	showstringspaces = false,
+	basicstyle=\small\ttfamily,
+	commentstyle=\color{gray45},
+	keywordstyle=\bfseries,
+	keywordstyle={\color{keywords}},
+	%
+	numbers=left,
+	numbersep=15pt,
+	numberstyle=\tiny,
+	numberfirstline = false,
+	breaklines=true,
+	basicstyle=\footnotesize\setstretch{1},
+}
+
+% minimizar fragmentado de listados
+\lstnewenvironment{listing}[1][]
+{\lstset{#1}\pagebreak[0]}{\pagebreak[0]}
+
+\lstdefinestyle{consola}
+{basicstyle=\scriptsize\bf\ttfamily,
+	backgroundcolor=\color{gray75},
+}
+
+\lstdefinestyle{C}
+{language=C,
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %            Definici?n del Documento PDF, (PDFLaTeX)            %
@@ -397,18 +456,18 @@ xvii, 144 pp.}
 
 \renewcommand \thechapter{\Roman{chapter}}
 %==================================================================
-\chapter{TÍTULO DEL ANEXO}\label{CAP:anexo0}
+\chapter{Código fuente}\label{CAP:anexo0}
 %\markboth{Tu anexo}{Tu anexo}%
-%\input{apendice0.tex}%
+\input{CodigoFuente.tex}%
 
 %==================================================================
-\chapter{TÍTULO DEL ANEXO}\label{CAP:anexo1}
+\chapter{Datasheet MAX3485}\label{CAP:anexo1}
 %\markboth{Tu anexo}{Tu anexo}%
-%\input{apendice1.tex}%
+\input{datasheetMAX3485.tex}%
 
 %\backmatter
 %==================================================================
-\chapter{TÍTULO DEL ANEXO}\label{CAP:anexo2}
+%\chapter{TÍTULO DEL ANEXO}\label{CAP:anexo2}
 %\markboth{Tu anexo}{Tu anexo}%
 %\input{apendice2.tex}%
 

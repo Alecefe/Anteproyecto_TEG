@@ -90,7 +90,7 @@ Para utilizar dicha salida se utiliza un transistor y una resistencia de pull-up
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\linewidth]{img/SeguidorEmisor}
-	\caption{Topología seguidor de emisor utilizada en la salida optoacoplada del medidor de energía.}
+	\caption{Topología utilizada en la salida opto acoplada del medidor de energía.}
 	\label{fig:seguidoremisor}
 \end{figure}
 
@@ -108,3 +108,87 @@ La unidad controladora es la encargada de: gestionar el estado del nodo en la re
 
 El cerebro de cada nodo tiene muchas tareas pero no todas se ejecutan al mismo tiempo, muchas dependen del nodo y de la configuración que se le de a este mediante el software. La forma de manejar de manera correcta las tareas en cada nodo será ilustrada en el siguiente capitulo.
 
+\subsection{Circuito impreso}
+
+Considerando las necesidades expuestas anteriormente se realizó el diseño de un circuito impreso. En este se agregó la circuitería necesaria para la salida de calibración con el optoacoplador, el módulo RS485, todo lo necesario para iniciar la unidad controladora ESP32 y un módulo de alimentación AC/DC con entrada en 120V y salida a 5V y luego un DC/DC de 5V a 3.3v ya que el ESP32 utiliza una lógica de 3.3v. Primero se presentan los esquemáticos:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{img/SchemaAlimentacion}
+	\caption{Esquemático del módulo de alimentación.}
+	\label{fig:schemaalimentacion}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/SchemaModulosExt}
+	\caption{Esquemáticos de interfaces con los medidores.}
+	\label{fig:schemamodulosext}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/SchemaESP32}
+	\caption{Esquemático de la unidad controladora implementada con el ESP32.}
+	\label{fig:schemaesp32}
+\end{figure}
+
+Es de resaltar que se buscó adaptar el tamaño de la tarjeta dentro de una contendor con cerramientos industriales, es por esta razón que tiene ese corte específico. Seguidamente, las visuales del diseño del circuito impreso:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.7\linewidth]{img/FrontPCB}
+	\caption{Imagen del diseño frontal de la PCB utilizando KiCad.}
+	\label{fig:frontpcb}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.7\linewidth]{img/BackPCB}
+	\caption{Imagen del diseño posterior de la PCB utilizando KiCad.}
+	\label{fig:backpcb}
+\end{figure}
+
+Y por último unas imágenes renderizadas de la tarjeta, junto con la lista de materiales en ella:\\
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{img/FrontRenderPCB}
+	\caption{Imagen de la capa frontal de la PCB renderizada.}
+	\label{fig:frontrenderpcb}
+\end{figure}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{img/BackRenderPCB}
+	\caption{Imagen de la capa posterior de la PCB renderizada.}
+	\label{fig:backrenderpcb}
+\end{figure}
+
+\begin{table}[H]
+	\centering
+	\caption{Lista de materiales utilizados en el diseño de la PCB}
+	\label{Tab:BOM}
+	\medskip
+	\begin{tabular}{lcc}
+		\toprule
+		Identificador & Descrición & Cantidad \\
+		\midrule
+		J1,J2 & Conn\_01x02\_Male & 2 \\
+		C1,C2,C4,C6 & .1uF & 4 \\
+		U4 & HLK-PM01 & 1 \\
+		R4 & 1k & 1 \\
+		R3,R1,R2 & 10k & 3 \\
+		U1 & ESP32-WROOM-32D & 1 \\
+		1,2,3,4 & MountingHole\_3.5mm & 4 \\
+		J3 & Conn\_01x03\_Male & 1 \\
+		J4 & Screw\_Terminal\_01x02 & 1 \\
+		C3 & 100uF & 1 \\
+		J8 & Screw\_Terminal\_01x04 & 1 \\
+		U3 & AP1117-15 & 1 \\
+		U2 & MAX3485 & 1 \\
+		\bottomrule
+	\end{tabular}
+\end{table}

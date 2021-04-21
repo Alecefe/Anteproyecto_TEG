@@ -5,7 +5,16 @@ Una vez establecido el hardware y realizado el diseño del software necesario par
 
 \section{Resultados de la interfaz gráfica}
 
-Para realizar las pruebas del sistema que se presentan a continuación se debió configurar cada uno de los nodos utilizando la interfaz gráfica implementada en el modo de configuración. A continuación se ilustran las distintas pantallas implementadas en ellas:
+Para realizar las pruebas del sistema que se presentan a continuación se debió configurar cada uno de los nodos utilizando la interfaz gráfica implementada en el modo de configuración. A continuación se ilustra el procedimiento y las distintas pantallas implementadas en ello:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{img/ejemploPagina}
+	\caption{Log serial del microcontrolador en modo servidor HTTP cuando es enviada una de las pantallas.}
+	\label{fig:ejemplopagina}
+\end{figure}
+
+Cuando el usuario solicita cualquier página al servidor se produce recibe la petición y se procesa enviando posteriormente el archivo solicitado como se puede ver en la figura \ref{fig:ejemplopagina}, esto es común para todas las pantallas y se puede ver afectado por la congestión de la red local, ya que el envío se realiza mediante de esta.\\
 
 \begin{figure}[H]
 	\centering
@@ -14,6 +23,17 @@ Para realizar las pruebas del sistema que se presentan a continuación se debió c
 	\label{fig:login}
 \end{figure}
 
+Seguidamente, se puede observar la pantalla de inicio de sesión, figura \ref{fig:login}, en la que el usuario debe introducir de manera correcta clave y contraseña para acceder a la configuración del equipo, considerando la seguridad del mismo.\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{img/loginJSONv2}
+	\caption{Mensaje recibido en el servidor cuando el usuario rellena el inicio de sesión y envía los datos.}
+	\label{fig:loginjson}
+\end{figure}
+
+Una vez es iniciada la sesión se muestra el formulario de configuración de la red mallada, en el que se introducen los parámetros de configuración de dicha red.
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\linewidth]{img/FormMesh}
@@ -21,6 +41,15 @@ Para realizar las pruebas del sistema que se presentan a continuación se debió c
 	\label{fig:formmesh}
 \end{figure}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{img/meshJSON}
+	\caption{Mensaje recibido en el servidor cuando el usuario rellena el formulario de red mallada y envía los datos.}
+	\label{fig:meshjson}
+\end{figure}
+
+
+Con los parámetros en las figuras \ref{fig:formmesh} y \ref{fig:meshjson} se puede inicializar la red mallada. Se procede luego mediante el menú de la barra superior de la página para acceder al formulario de parámetros seriales.
 
 \begin{figure}[H]
 	\centering
@@ -31,10 +60,28 @@ Para realizar las pruebas del sistema que se presentan a continuación se debió c
 
 \begin{figure}[H]
 	\centering
+	\includegraphics[width=1\linewidth]{img/modbusJSON}
+	\caption{Mensaje recibido en el servidor cuando el usuario rellena el formulario de parámetros seriales y envía los datos.}
+	\label{fig:modbusjson}
+\end{figure}
+
+ Los parámetros de las figuras \ref{fig:formmodbus} y \ref{fig:modbusjson} son los parámetros requeridos para para la extracción de la data desde el medidor. En la siguiente pantalla se debe rellenar el formulario de la red local:
+
+\begin{figure}[H]
+	\centering
 	\includegraphics[width=0.9\linewidth]{img/LocWifijpg}
 	\caption{Vista de la pantalla de parámetros de red local}
 	\label{fig:locwifijpg}
 \end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{img/locwifiJSON}
+	\caption{Mensaje recibido en el servidor cuando el usuario rellena el formulario de red local y envía los datos.}
+	\label{fig:locwifijson}
+\end{figure}
+
+Los parámetros de las figuras \ref{fig:locwifijpg} y \ref{fig:locwifijson} son utilizados para que el equipo pueda tener acceso al WiFi en caso de ser el nodo central. Con este paso se cumple el mínimo necesario para que el equipo funcione. Por último se realizó una pantalla para cambiar el usuario y la contraseña de inicio de sesión, en caso de que se quiera modificar esta.
 
 \begin{figure}[H]
 	\centering
@@ -43,9 +90,33 @@ Para realizar las pruebas del sistema que se presentan a continuación se debió c
 	\label{fig:userlog}
 \end{figure}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/userJSON}
+	\caption{Mensaje recibido en el servidor cuando el usuario rellena el formulario de actualizar usuario y contraseña y envía los datos.}
+	\label{fig:userjson}
+\end{figure}
+
 
 \section{Prueba de funcionamiento del sistema}
 
+Una vez introducidos los datos de configuración en el modo anterior, se reinician los nodos para que la red comience a funcionar. Cada nodo se conecta al WiFi y entre sí, luego se realiza una votación en la que se elige un nodo central, estableciéndose así la primer capa de la red.\\
+
+Posteriormente se establece la estructura de la red, en el caso de estas pruebas realizadas se colocó en los parámetros del nodo central un máximo de tres (3) capas de profundidad para la red y un  máximo de dos (2) conexiones con nodos hijos para dicho nodo central.\\
+
+En la siguiente capa de la red, la segunda capa, se encuentra un nodo repetidor que funcionará como demostración de la capacidad de la red de comunicarse con nodos en capas más profundas a través de otros nodos. El mismo fue configurado con la capacidad de tener para esta prueba un (1) solo nodo hijo conectado. En esta segunda capa también se encuentra uno de los nodos a medir, el nodo de pulsos, conectado directamente con el nodo central.\\
+
+En la tercera y última capa para esta prueba y conectado al nodo enlace se encuentra el nodo de transmisión serial RS485. Un diagrama de la prueba quedaría de la siguiente manera:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/DiagramaPrueba}
+	\caption{Diagrama general de la red para pruebas.}
+	\label{fig:diagramaprueba}
+\end{figure}
+
+En esta red se realizaran pruebas de extracción de datos para comprobar el funcionamiento de los nodos y pruebas de restablecimiento del sistema en caso de que los nodos se desconecten de la red.
+ 
 \subsection{Extracción de datos del nodo contador de pulsos}
 
 \begin{table}[H]
@@ -119,8 +190,17 @@ Para realizar las pruebas del sistema que se presentan a continuación se debió c
 	\end{tabular}
 \end{table}
 
-\section{Prueba de reestablecimiento del sistema}
+\section{Prueba de restablecimiento del sistema}
 \subsection{Para el nodo central}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/ReestablecerRoot}
+	\caption{Ejemplo de la red restablecida luego de desconectar el nodo central si el nodo repetidor gana la votación.}
+	\label{fig:reestablecerroot}
+\end{figure}
+
+
 \begin{table}[H]
 	\centering
 	\caption{Tiempo de recuperación de la red cuando es desconectado el nodo central.}
@@ -140,6 +220,16 @@ Para realizar las pruebas del sistema que se presentan a continuación se debió c
 \end{table}
 
 \subsection{Para cualquier otro nodo}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/ReestablecerOtro}
+	\caption{Ejemplo de la red restablecida luego de desconectar el nodo repetidor.}
+	\label{fig:reestablecerotro}
+\end{figure}
+
+
+
 \begin{table}[H]
 	\centering
 	\caption{Tiempo de recuperación de la red cuando es desconectado un nodo, exceptuando el nodo central.}

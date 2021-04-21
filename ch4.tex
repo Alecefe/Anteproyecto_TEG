@@ -154,6 +154,8 @@ La interfaz gráfica consta de 5 pantallas, cada una con un formulario que son pa
 	
 \end{enumerate}
 
+Además de las pantallas el micro debe recibir y procesar todos estos datos que le son enviados en formato JSON. En cada pantalla se tiene una pareja clave-valor por cada campo de los formularios, el servidor debe recibirlos y extraer los datos para que luego almacenarlos de forma permanente en la memoria y estos datos estén disponibles cuando se reinicie el dispositivo ya configurado.
+
 \subsection{Modo de operación}
 
 En este modo el primer periférico en configurarse en cualquiera de los nodos es la memoria no volátil (NVS), también llamada memoria flash, que se utiliza para almacenar información persistente entre reinicios del microcontrolador. El fabricante ofrece una interfaz de programación de aplicaciones (%Link a la API de NVS
@@ -165,6 +167,8 @@ Se toma desde la memoria flash la información sobre el tipo de nodo (serial RS48
 
 Luego se debe configurar el WiFi en cada uno de los medidores para poder unirse a la red mallada. Este periférico en el ESP32 posee también una interfaz de programación de aplicaciones para programarlo de manera más sencilla (%Link a la API del WiFi
 ). Mediante esta interfaz, se calibra el WiFi, se asigna un lugar para almacenar sus parámetros de calibración y se coloca el modo de operación. El ESP32 posee tres modos de operación para este periférico: estación (STA), punto de acceso (AP) y un modo híbrido (AP/STA). Este último es el que se suele utilizar en la red mallada. Una vez configurado el WiFi se procede con la configuración e inicio de la red mallada.
+
+Cada nodo tiene una serie de tareas que son repartidas de manera equitativa entre ambos núcleos del ESP32, el objetivo es que estas se ejecuten en paralelo y el RTOS sea el encargado de esperar por los datos necesarios para su ejecución sincronizada y correcta.\\
 
 \subsubsection{La red mallada y el nodo central}
 
@@ -357,9 +361,8 @@ Esto sin considerar que el número de particiones de 64kB se puede aumentar y sol
 
 El nodo repetidor es un nodo que ha sido configurado para ser parte de la red mallada sin tener conexiones físicas con alguna remota mediante un bus serial o con un medidor de energía mediante su salida de calibración.\\
 
-Este tipo de nodos es útil para ampliar la cobertura de la red en caso de que sea necesario abarcar un espacio o tener mayor densidad de nodos en una zona específica. Este nodo no posee tareas implementadas en sus núcleos, solo posee el código necesario para ser parte de la red y repetir en ambos sentidos los mensajes que lleguen a este.\\
-
+Este tipo de nodos es útil para ampliar la cobertura de la red en caso de que sea necesario abarcar un mayor área o tener mayor densidad de nodos para mejorar la conexión entre estos en una zona específica. Este nodo no posee tareas implementadas en sus núcleos, solo posee el código necesario para ser parte de la red y repetir en ambos sentidos los mensajes que lleguen a este.\\
 
 \subsubsection{Otras consideraciones}
 
-Las tareas se crean en lineas de código contiguas de modo tal que no hay un orden de creación de ellas, pues el objetivo es que estas se ejecutan en paralelo y el RTOS sea el encargado de esperar por los datos necesarios para su ejecución sincronizada y correcta.\\
+Cabe destacar que cualquier tipo de nodo de la red puede y retransmite los mensajes que le llegan sin importar si es de pulsos, serial RS485 o repetidor. Esta capacidad de retransmisión viene incorporada en el esqueleto de la red implementado por el fabricante.
