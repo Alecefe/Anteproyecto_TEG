@@ -115,7 +115,9 @@ En la tercera y última capa para esta prueba y conectado al nodo enlace se encue
 	\label{fig:diagramaprueba}
 \end{figure}
 
-En esta red se realizaran pruebas de extracción de datos para comprobar el funcionamiento de los nodos y pruebas de restablecimiento del sistema en caso de que los nodos se desconecten de la red.
+En esta red se realizaran pruebas de extracción de datos para comprobar el funcionamiento de los nodos y pruebas de restablecimiento del sistema en caso de que los nodos se desconecten de la red.\\
+
+El tiempo entre envío de mensajes en la red se estableció en 1 segundo y el máximo tiempo de respuesta aceptado se estableció en 5s para las siguientes pruebas.
  
 \subsection{Extracción de datos del nodo contador de pulsos}
 
@@ -124,14 +126,14 @@ En esta red se realizaran pruebas de extracción de datos para comprobar el funci
 	\caption{Registro de mensajes del maestro sobre la comunicación con el esclavo de pulsos.}
 	\label{Tab:Master2Pulse}
 	\medskip
-	\begin{tabular}{l|lllr}
+	\begin{tabular}{l|lllrr}
 		\toprule
-		\multicolumn{5}{c}{Nodo maestro} \\
-		\#&Enviados& Recibidos& Tiempo de prueba [s]& Errores detectados\\
+		\multicolumn{6}{c}{Registro del maestro modbus} \\
+		Prueba N\textdegree&Enviados& Recibidos& Tiempo [s]& Errores & Error[\%]\\
 		\midrule
-		1&1500  & 1499  & 2223,801 & 13   \\
-		2&1500 & 1499  & 2226,643 & 16   \\
-		3&1500& 1500 & 2226,970 & 15\\
+		1&1500  & 1499  & 2223,801 & 13 & 0,87\\
+		2&1500 & 1499  & 2226,643 & 16 & 1,07\\
+		3&1500& 1500 & 2226,970 & 15 & 1\\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -141,17 +143,21 @@ En esta red se realizaran pruebas de extracción de datos para comprobar el funci
 	\caption{Registro de mensajes del nodo contador de pulsos sobre la comunicación con el maestro.}
 	\label{Tab:Pulse2Master}
 	\medskip
-	\begin{tabular}{l|lllr}
+	\begin{tabular}{l|lllrr}
 		\toprule
-		\multicolumn{5}{c}{Nodo contador de pulsos} \\
-		 \# & Recibidos & Enviados & Tiempo de prueba [s] & Errores detectados \\
+		\multicolumn{6}{c}{Nodo contador de pulsos} \\
+		 Prueba N\textdegree& Recibidos & Enviados & Tiempo [s] & Error de procesamiento & Error[\%]\\
 		\midrule
-		1&1499 & 1499&2223,801 & -\\	
-		2&1499 & 1499&2226,643 & -\\
-		3&1499 & 1500&2226,970 & -\\
+		1&1499 & 1499&2223,801 & - & -\\	
+		2&1499 & 1499&2226,643 & - & -\\
+		3&1500 & 1500&2226,970 & - & -\\
 		\bottomrule
 	\end{tabular}
 \end{table}
+
+El nodo contador de pulsos culminó con una cantidad de errores máxima en todas las pruebas realizadas del 1,07\% en el registro del maestro modbus (tabla \ref{Tab:Master2Pulse}), lo que denota el correcto funcionamiento de la red con este nodo. \\
+
+Se observa en la tabla \ref{Tab:Pulse2Master} que la cantidad de mensajes recibidos y enviados es la misma por lo que no hubo errores en el procesamiento del nodo, esta cantidad además coincide casi en totalidad con el registro del maestro por lo que se infiere que los errores registrados son errores debido al timeout ó error de identificador en la trama enviada por el nodo.
 
 \subsection{Extracción de datos del nodo RS485}
 
@@ -161,14 +167,14 @@ En esta red se realizaran pruebas de extracción de datos para comprobar el funci
 	\caption{Registro de mensajes del maestro sobre la comunicación con el nodo serial rs485.}
 	\label{Tab:Master2Serial}
 	\medskip
-	\begin{tabular}{l|lllr}
+	\begin{tabular}{l|lllrr}
 		\toprule
-		\multicolumn{5}{c}{Nodo maestro} \\
-		\#&Enviados& Recibidos& Tiempo de prueba [s]& Errores detectados\\
+		\multicolumn{6}{c}{Registro del maestro modbus} \\
+		Prueba N\textdegree&Enviados& Recibidos& Tiempo[s]& Errores& Error[\%]\\
 		\midrule
-		1&1500   & 1481  & 2761,411 & 67   \\
-		2&1500  & 1481  & 2761,803 & 67  \\
-		3&1500 & 1480 & 2758,267 & 65\\
+		1&1500   & 1481  & 2761,411 & 67 & 4,46 \\
+		2&1500  & 1481  & 2761,803 & 67 & 4,46 \\
+		3&1500 & 1480 & 2758,267 & 65 & 4,33\\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -178,17 +184,21 @@ En esta red se realizaran pruebas de extracción de datos para comprobar el funci
 	\caption{Registro de mensajes del nodo serial rs485 sobre la comunicación con el maestro.}
 	\label{Tab:Serial2Master}
 	\medskip
-	\begin{tabular}{l|lllr}
+	\begin{tabular}{l|lllrr}
 		\toprule
-		\multicolumn{5}{c}{Nodo serial RS485} \\
-		\# & Recibidos & Enviados & Tiempo de prueba [s] & Errores detectados \\
+		\multicolumn{6}{c}{Nodo serial RS485} \\
+		Prueba N\textdegree & Recibidos & Enviados & Tiempo[s] & Error de procesamiento & Error[\%]\\
 		\midrule
-		1&1498  & 1481 &2761,411 & -\\	
-		2&1498  & 1481 &2761,803 & -\\
-		3&1498 & 1480 &2758,267 & -\\
+		1&1498  & 1481 &2761,411 & 17 & 1,13\\	
+		2&1498  & 1481 &2761,803 & 17 & 1,13\\
+		3&1498 & 1480 &2758,267 & 18 & 1,20 \\
 		\bottomrule
 	\end{tabular}
 \end{table}
+
+La diferencia en la cantidad de mensajes enviados y recibidos evidencia perdidas de paquetes en la red y un funcionamiento menor que el nodo de pulsos, las tasas de error registradas por el maestro denotan un porcentaje máximo de 4,46\% como se observa en la tabla \ref{Tab:Master2Serial}.\\
+
+Con los datos de la tabla \ref{Tab:Serial2Master} se puede observar que hubo un máximo de 18 errores en el procesamiento de los mensajes en una prueba, estos errores en el procesamiento del nodo pueden surgir debido al tiempo de espera máximo que se tiene programado en el bus serial de este tipo de nodos, puede deberse al tiempo de respuesta del medidor asociado al nodo que puede verse saturado y responder menos mensajes de los que se demandan.
 
 \section{Prueba de restablecimiento del sistema}
 \subsection{Para el nodo central}
@@ -208,7 +218,7 @@ En esta red se realizaran pruebas de extracción de datos para comprobar el funci
 	\medskip
 	\begin{tabular}{lr}
 		\toprule
-		\# & Tiempo de recuperación [ms] \\
+		Prueba N\textdegree & Tiempo de recuperación [ms] \\
 		\midrule
 		1&25541 \\
 		2&24598 \\
@@ -218,6 +228,11 @@ En esta red se realizaran pruebas de extracción de datos para comprobar el funci
 		\bottomrule
 	\end{tabular}
 \end{table}
+
+De las pruebas y el tiempo en la tabla \ref{Tab:healingMasterNode} se puede observar que el nodo central como nodo fundamental de la red tarda más de 25 segundos en recuperarse, a este tiempo le afectan varios factores: El tiempo que toma en darse cuenta la red que se perdió la conexión con dicho nodo central, luego el tiempo de votación para la elección del nuevo nodo central y por último el tiempo de reordenamiento de la red (puede verse afectado por la cantidad de nodos).\\
+
+Al ser solo 3 nodos los restantes y tardar dicha cantidad de tiempo, este es un factor a considerar para su uso en aplicaciones críticas. 
+
 
 \subsection{Para cualquier otro nodo}
 
@@ -229,7 +244,6 @@ En esta red se realizaran pruebas de extracción de datos para comprobar el funci
 \end{figure}
 
 
-
 \begin{table}[H]
 	\centering
 	\caption{Tiempo de recuperación de la red cuando es desconectado un nodo, exceptuando el nodo central.}
@@ -237,7 +251,7 @@ En esta red se realizaran pruebas de extracción de datos para comprobar el funci
 	\medskip
 	\begin{tabular}{lr}
 		\toprule
-		\# & Tiempo de recuperación [ms] \\
+		Prueba N\textdegree & Tiempo de recuperación [ms] \\
 		\midrule
 		1&17776 \\
 		2&18163 \\
@@ -252,3 +266,5 @@ En esta red se realizaran pruebas de extracción de datos para comprobar el funci
 		\bottomrule
 	\end{tabular}
 \end{table}
+
+En este caso (tabla \ref{Tab:healingAnyNode}) se observa que el tiempo es varios segundos menor respecto al tardado para el restablecimiento del nodo central, para un nodo cualquiera no se debe realizar una votación ni el restablecimiento de la totalidad de la red sino que puede ser parcialmente renovada, reduciendo así el tiempo que se tarda la red en sanar la pérdida.
