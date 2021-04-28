@@ -1,11 +1,7 @@
 % !TeX spellcheck = es_ES
 % !TeX encoding = ISO-8859-1
 
-En este capítulo se documentarán los fundamentos sobre Medidores de energía, Redes WiFi Malladas y el protocolo Modbus.
-
-%\section{Sistema SCADA}
-
-%\subsection{Definición}
+En este capítulo se documentarán los fundamentos sobre Medidores de energía, Redes WiFi Malladas y el protocolo modbus.
 
 \section{Fundamentos de medición consumo de energía eléctrica}
 
@@ -126,7 +122,7 @@ Cada uno de estos niveles ejerce sus propias funciones para que en conjunto el s
 	
 	\item \textbf{Capa de presentación}: Se encarga de representar la información funcionando como un traductor entre equipos. En esta capa se trabajan más los datos en sí que cómo se establece el enlace para que estos lleguen. Se tratan aspectos como la semántica (qué significan) y la sintaxis (formato de los datos) para garantizar la compatibilidad con los equipos del sistema. También es la encargada de cifrar los datos y comprimirlos de ser necesario.
 	
-	\item \textbf{Capa de sesión}: Esta capa es la que se encarga de mantener y controlar el enlace establecido entre dos computadores que están transmitiendo datos de cualquier índole. Por lo tanto, el servicio provisto por esta capa es la capacidad de asegurar que, dada una sesión establecida entre dos máquinas, la misma se pueda efectuar para las operaciones definidas de principio a fin, reanudándolas en caso de interrupción.11? En muchos casos, los servicios de la capa de sesión son parcial o totalmente prescindibles.
+	\item \textbf{Capa de sesión}: Esta capa es la que se encarga de mantener y controlar el enlace establecido entre dos computadores que están transmitiendo datos de cualquier índole. Por lo tanto, el servicio provisto por esta capa es la capacidad de asegurar que, dada una sesión establecida entre dos máquinas, la misma se pueda efectuar para las operaciones definidas de principio a fin, reanudándolas en caso de interrupción. En muchos casos, los servicios de la capa de sesión son parcial o totalmente prescindibles.
 	
 \end{itemize}
 
@@ -141,6 +137,43 @@ La integración de la automatización asociada con los recursos eléctricos es impo
 	\label{fig:osigwac}
 \end{figure}
 
+\section{Sobre el protocolo Modbus}
+
+\subsection{Definiciones}
+
+\subsection{Modbus RTU}
+
+Modbus es un protocolo de comunicaciones, basado en la arquitectura maestro/esclavo o cliente/servidor, diseñado en 1979 por Modicon para su gama de controladores lógicos programables (PLCs).\\
+
+Debido a que este protocolo fue público, de fácil uso y que requiere poco desarrollo (maneja bloques de datos sin suponer restricciones) se convirtió en un protocolo de comunicaciones estándar en la industria. Es el protocolo de mayor disponibilidad para la conexión de dispositivos electrónicos industriales. Un ejemplo de trama modbus es la siguiente:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/modbusRTUTrama}
+	\caption{Ejemplo ilustrativo de una trama modbus RTU. Tomado de \cite{Logicbus}}
+	\label{fig:modbusrtutrama}
+\end{figure}
+
+
+El protocolo Modbus permite el control de una red de dispositivos, por ejemplo un equipo de medición temperatura y humedad puede comunicar los resultados a una PC. Modbus también se usa para la conexión de un PC de supervisión con una unidad remota (RTU) en sistemas de supervisión de adquisición de datos (SCADA). Existen versiones del protocolo Modbus para puerto serial y Ethernet (Modbus/TCP).\\
+
+
+\subsection{Modbus TCP}
+
+Modbus/TCP es un protocolo de comunicación diseñado que permite a equipos industriales tales como PLCs, PC, drivers para motores y otros tipos de dispositivos físicos de entrada/salida, comunicarse sobre una red Ethernet. Fue introducido por Schneider Automation como una variante de la familia de protocolos MODBUS, ampliamente usada para la supervisión y el control de equipo de automatización. Específicamente el protocolo define el uso de mensajes MODBUS en un entorno intranet o internet usando los protocolos TCP/IP.\\
+
+La especificación Modbus/TCP define un estándar interoperable en el campo de la automatización industrial, el cual es simple de implementar para cualquier dispositivo que soporte sockets TCP/IP. Todas las solicitudes son enviadas vía TCP sobre el puerto registrado 502 y normalmente usando comunicación half-duplex sobre una conexión dada. Es decir, no hay beneficio en enviar solicitudes adicionales sobre una conexión única mientras una respuesta está pendiente. Modbus/TCP básicamente encapsula una trama MODBUS dentro de una trama TCP.\\
+
+\subsection{Algunos beneficios sobre el protocolo Modbus RTU ó TCP}
+
+\begin{itemize}
+	\item De código abierto, no se requiere pagar por licencia.
+	\item Ampliamente soportado por HMIs o softwares SCADA
+	\item Fácil de usar
+	\item Se pueden integrar varios equipos de manera sencilla
+	\item Bajo costo de desarrollo
+	\item Conocido ampliamente en la industria
+\end{itemize}
 
 \section{Redes malladas}
 
@@ -169,11 +202,7 @@ La red de Internet como la conocemos es el ejemplo más conocido y similar a una 
 
  Esta capacidad de elegir la ruta debe estar basada en algoritmos para determinar el camino óptimo que será recorrido por el mensaje. Este algoritmo de enrutamiento debe tomar en cuenta las distintas condiciones que puede presentar el medio de transmisión, las interferencias o ruido que pueda existir según la banda de transmisión, la posible colisión de datos en un nodo, etc, para así determinar hacia dónde debe ir el mensaje en cada nodo para llegar a su destino.\\
  
- La implementación de topologías malladas en sistemas embebidos ha encontrado problemas en la necesidad de procedimientos adicionales relacionados con el enrutamiento. Hay algunos ejemplos de protocolos que soportan la red mallada sobre una red IP, por ejemplo el protocolo B.A.T.M.A.N (Better Approach To Mobile Adhoc Networking), Babel (Protocolo de distancia de vector para IPv6 y IPv4 con  propiedades de convergencia rápida), HWMP (Protocolo Híbrido Inalámbrico Mallado), entre otros \cite{VazquezA}. El problema surge en la implementación de la pila TCP/IP en estos sistemas puesto que un sistema embebido posee recursos de cómputo limitados. Es por ello que se debe seleccionar según la aplicación el poder de cómputo necesario y la topología de la red que se requiere para cumplir con cada solución. Se describirán algunas redes WiFi malladas, con funcionamiento caracterizado según la aplicación:
- 
- 
- 
- Para que el mensaje tenga un destinatario debe existir una manera de identificar cada nodo de una red mallada, en el caso de la red mallada WiFi se utiliza la dirección MAC para diferenciar un nodo de otro.
+ La implementación de topologías malladas en sistemas embebidos ha encontrado problemas en la necesidad de procedimientos adicionales relacionados con el enrutamiento. Hay algunos ejemplos de protocolos que soportan la red mallada sobre una red IP, por ejemplo el protocolo B.A.T.M.A.N (Better Approach To Mobile Adhoc Networking), Babel (Protocolo de distancia de vector para IPv6 y IPv4 con  propiedades de convergencia rápida), HWMP (Protocolo Híbrido Inalámbrico Mallado), entre otros \cite{VazquezA}. El problema surge en la implementación de la pila TCP/IP en estos sistemas puesto que un sistema embebido posee recursos de cómputo limitados. Es por ello que se debe seleccionar según la aplicación el poder de cómputo necesario y la topología de la red que se requiere para cumplir con cada solución. Para que el mensaje tenga un destinatario debe existir una manera de identificar cada nodo de una red mallada, en el caso de la red mallada WiFi se utiliza la dirección MAC para diferenciar un nodo de otro.
  
  \subsubsection{Direccionamiento por MAC}
  
@@ -185,7 +214,7 @@ La red de Internet como la conocemos es el ejemplo más conocido y similar a una 
  \end{equation}
  
  La primera mitad de la dirección MAC contiene el número identificador del fabricante del adaptador (i.e. 00:A0:C9:14:C8:29). Dichos identificadores están regulados por un estándar de Internet. La segunda parte de la dirección MAC representa el número de serial asignado al adaptador por el fabricante. \cite{VazquezA}
- 
+
 \section{La red mallada ESP-MESH}
 
 \subsection{Definición}
@@ -310,8 +339,6 @@ Un sistema operativo es un conjunto de órdenes y programas de un sistema informá
 %Las aplicaciones ejecutan las funcionalidades que el usuario quiere o necesita. Los servicios del sistema operativo hace el desarrollo de aplicaciones rápido, simple, y mantenible.
 
 La ventaja de utilizar sistemas operativos es que estos permiten gestionar los recursos de modo que se puedan ejecutar múltiples órdenes al mismo tiempo. Aunque en realidad cada procesador solo está ejecutando una orden a la vez, el sistema operativo es esa capa de abstracción que simula la ejecución en paralelo de varias tareas.
-
-%La mayoría de los sistemas operativos permiten que se ejecuten múltiples programas al mismo tiempo. Es es llamado multi-tarea. Aunque, en realidad, cada procesador solo puede correr una tarea. Una parte del sistema operativo es llamado planificador,y es responsable de la decisión cual programa correr y cuando, así da la ilusión de la ejecución simultanea de tareas mientras conmuta rápidamente entre cada programa [17]
 
 \subsection{FreeRTOS}
 

@@ -21,6 +21,13 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{Logicbus}
+\BIBentryALTinterwordspacing
+Logicbus. (2020) "fundamentos del protocolo modbus". Consultado en diciembre
+  2020. [Online]. Available:
+  \url{https://www.logicbus.com.mx/Modbus.php\#:~:text=Modbus\%20es\%20un\%20protocolo\%20de,controladores\%20l\'ogicos\%20programables\%20(PLCs).\&text=Es\%20el\%20protocolo\%20de\%20mayor,conexi\'on\%20de\%20dispositivos\%20electr\'onicos\%20industriales.}
+\BIBentrySTDinterwordspacing
+
 \bibitem{ESP-MESH}
 \BIBentryALTinterwordspacing
 E.~Systems. (2020) "fundamentos de esp-mesh". Consultado en diciembre 2020.

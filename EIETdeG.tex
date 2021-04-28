@@ -333,16 +333,23 @@
 {\cleardoublepage \thispagestyle{empty} \vspace*{\stretch{1}}%
 \begin{center} \em} {\end{center} \vspace*{\stretch{3}} }%
 \begin{dedication}%
-A mis padres \\ Ayarlen Ferrer y Marco Rodríguez. \\
-\bigskip
-
-A la memoria de mis abuelos \\
-Esperanza Merecuana y Francisco Ferrer.\\
+\textbf{A mis padres \\ Ayarlen Ferrer y Marco Rodríguez. \\}
+Por ustedes ha sido esto.\\
 
 \bigskip
 \bigskip
 \bigskip
+\bigskip
+
+\textbf{A la memoria de mis abuelos \\
+Esperanza Merecuana y Francisco Ferrer.\\}
 Dónde quiera que se encuentren, por todo lo que hicieron por mi y mis hermanos.\\ Eternamente gracias.
+
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+
 \end{dedication}%
 
 %==================================================================
@@ -350,7 +357,7 @@ Dónde quiera que se encuentren, por todo lo que hicieron por mi y mis hermanos.\
 %\markboth{Reconocimientos}{Reconocimientos}%
 \addcontentsline{toc}{chapter}{RECONOCIMIENTOS Y AGRADECIMIENTOS}%
 %\setlength{\parskip}{0.2cm}%
-%\input{agradecimientos.tex}%
+\input{agradecimientos.tex}%
 
 %======================= P?gina de Resumen ==========================
 \newpage
@@ -367,15 +374,15 @@ Dónde quiera que se encuentren, por todo lo que hicieron por mi y mis hermanos.\
 \end{center}
 
 \noindent%
-\textbf{Tutor Académico: nombre del profesor. Tesis.
+\textbf{Tutor Académico: Ing. José Alonso. Tesis.
 Caracas, Universidad Central de Venezuela. Facultad de Ingeniería.
-Escuela de Ingeniería Eléctrica. Mención Electrónica. Año 2020,
-xvii, 144 pp.}
+Escuela de Ingeniería Eléctrica. Mención Electrónica, computación y control. Año 2021,
+xvii, 83 páginas sin contar anexos}
 
 \noindent
-\textbf{Palabras Claves:} Palabras clave. \\[1ex]
+\textbf{Palabras Claves:} Red mallada, WiFi, ESP32, Microcontroladores, Adquisición de datos, Transmisión de datos, nodos, Medidores de Energía, Comunicación serial, Almacenamiento nó volátil\\[1ex]
 
-\noindent \textbf{Resumen.-} Escribe acá tu resumen
+\noindent \textbf{Resumen.-} En este trabajo se comprende el diseño e implementación de una red mallada WiFi utilizando el ESP32 como microcontrolador para la adquisición y transmisión de datos de medidores de energía. Se implementa una red mallada estable, enrutada automáticamente y capaz de sanear desconexiones. Se establecen las interfaces necesarias para comunicarse con los medidores de energía, con esta base se diseñan e implementan: un nodo con comunicación por bus serial RS485 y un nodo con acumulador de pulsos que guarda en memoria no volátil los datos. Se implementa una GUI web para el usuario. La red se comunica hacia el exterior mediante un socket TCP. Se realizan pruebas para comprobar tiempos de respuesta, errores y restablecimiento de la red en caso de desconexión de un nodo. La implementación es satisfactoria y cubre con los requerimientos de este caso de uso, sin embargo presenta tiempos de respuesta que no son recomendables para aplicaciones críticas.
 
 \end{spacing}
 
